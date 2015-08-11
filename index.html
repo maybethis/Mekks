@@ -6,14 +6,14 @@
 
         <title>Mekks</title>
         <meta name="description" content="Description of Mekks">
-        <meta name="viewport" content="width=device-width;initial-scale=1;user-scalable=no">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/styles.css">
-
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="http://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
     </head>
 
@@ -21,29 +21,39 @@
       <div id="app">
         <div id="gameView">
             <div class="header">
+                <div class="row">
+                    <div class="col-xs-2 health-wrapper text-left">
+                        <button class="health">
+                            <span class="glyphicon glyphicon-heart-empty"></span>
+                        </button>
+                    </div>
+                    
+                    <div class="col-xs-3">
+                    </div>
 
-                <button class="health">
-                    <span class="glyphicon glyphicon-heart-empty"></span>
-                </button>
+                    <div class="col-xs-2 menu-btn-wrapper text-center">
+                        <button class="menu-btn">
+                            <span class="glyphicon glyphicon-home"></span>
+                        </button>
+                    </div>
 
-                <span></span>
+                    <div class="col-xs-3">
+                    </div>
+                    
+                    <div class="col-xs-2 energy-cells text-right">
+                        <button class="energy-cell">
+                            <span class="glyphicon glyphicon-flash"></span>
+                        </button>
+                        <button class="energy-cell">
+                            <span class="glyphicon glyphicon-ok-circle"></span>
+                        </button>
+                        <button class="energy-cell">
+                            <span class="glyphicon glyphicon-refresh"></span>
+                        </button>
+                    </div>
 
-                <button class="menu">
-                    <span class="glyphicon glyphicon-home"></span>
-                </button>
 
-                <span></span>
-
-                <button class="charge">
-                    <span class="glyphicon glyphicon-flash"></span>
-                </button>
-                <button class="charge">
-                    <span class="glyphicon glyphicon-ok-circle"></span>
-                </button>
-                <button class="charge">
-                    <span class="glyphicon glyphicon-refresh"></span>
-                </button>
-
+                </div>
             </div>
 
             <div class="content">
@@ -80,16 +90,21 @@
             </div>
 
             <div class="footer">
+                <div class="row">
+                    <div class="col-xs-2 text-left tinker-col">
+                        <button class="tinker-btn">
+                            <span class="glyphicon glyphicon-briefcase"></span>
+                        </button>
+                    </div>
 
-                 <button>
-                    <span class="glyphicon glyphicon-briefcase"></span>
-                </button>
+                <div class="col-xs-8"></div>
 
-                <span></span>
-
-                <button>
-                    <span class="glyphicon glyphicon-screenshot"></span>
-                </button>
+                    <div class="col-xs-2 text-right">
+                        <button class="attack-btn">
+                            <span class="glyphicon glyphicon-screenshot"></span>
+                        </button>
+                    </div>
+                </div>
 
             </div>
           </div>

@@ -2,3 +2,33 @@ html,body {
     margin: 0;
     padding: 0;
 }
+
+#app {}
+
+#gameView {}
+    .header {width: 100%;}
+
+        .health-wrapper {}
+            .health {}
+                .glyphicon.glyphicon-heart-empty {}
+
+        .menu-btn-wrapper {}
+            .menu-btn {}
+                .glyphicon.glyphicon-home {}
+
+        .energy-cells {}
+            .energy-cell {}
+                .glyphicon.glyphicon-flash {}
+                .glyphicon glyphicon-ok-circle {}
+                .glyphicon glyphicon-refresh {}
+
+    .content {}
+        .mekk {}
+            #player {}
+            #enemy {}
+
+    .footer {}
+        .tinker-btn {}
+            .glyphicon glyphicon-briefcase {}
+        .attack-btn {}
+            .glyphicon glyphicon-screenshot {}
