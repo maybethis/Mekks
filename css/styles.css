@@ -1,22 +1,24 @@
 html,body {
     margin: 0;
     padding: 0;
+    width: 0;
+    height: 0;
 }
 
 #app {}
 
 #gameView {}
-    .header {width: 100%;}
+    .header {position: fixed; width: 100%; top:0;}
 
-        .health-wrapper {}
+        .health-wrapper {text-align: left;}
             .health {}
                 .glyphicon.glyphicon-heart-empty {}
 
-        .menu-btn-wrapper {}
+        .menu-btn-wrapper {text-align: center;}
             .menu-btn {}
                 .glyphicon.glyphicon-home {}
 
-        .energy-cells {}
+        .energy-cells {text-align: right;}
             .energy-cell {}
                 .glyphicon.glyphicon-flash {}
                 .glyphicon glyphicon-ok-circle {}
@@ -27,7 +29,7 @@ html,body {
             #player {}
             #enemy {}
 
-    .footer {}
+    .footer {position: fixed; width:100%; bottom: 0;}
         .tinker-btn {}
             .glyphicon glyphicon-briefcase {}
         .attack-btn {}
