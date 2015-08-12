@@ -2,16 +2,16 @@ html,body {
     position: absolute; top: 0;bottom: 0;left: 0;right: 0; margin: 0; padding: 0; margin: 0; border: 0;background: #000
 }
 
-#app {position: absolute; top: 0;bottom: 0;left: 0;right: 0; margin: auto; overflow: hidden; width: 480px; height: 480px; padding: 0;background: #fff}
+#app {position: absolute; top: 0;bottom: 0;left: 0;right: 0; margin: auto; overflow: hidden; width: 100%; min-height: 100%; padding: 0;background: #fff}
     #header {position: absolute;width: 100%; margin: 0;}
-
-            .health-btn {width: 160px;height: 160px;border-radius: 80px;padding-left: 100px; padding-top: 80px; margin-left: -90px;margin-top: -90px; border: 0}
+            #header button {border: 0}
+            .health-btn {margin-top: 10px}
                 .glyphicon.glyphicon-heart-empty {}
 
-            .menu-btn {width: 120px;height: 120px;border-radius: 80px; margin-top: -60px;padding-top: 60px; margin-left:-20px; border: 0}
+            .menu-btn {width: 120px;height: 120px;border-radius: 80px; margin-top: -60px;padding-top: 60px; border: 0}
                 .glyphicon.glyphicon-home {}
 
-            .energy-cell {width: 40px;height: 40px;border-radius: 10px; margin: 0;padding: 0;margin-top: 10px}
+            .energy-cell {margin-top: 10px;}
                 .glyphicon.glyphicon-flash {}
                 .glyphicon glyphicon-ok-circle {}
                 .glyphicon glyphicon-refresh {}
