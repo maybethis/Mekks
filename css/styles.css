@@ -3,19 +3,20 @@ html,body {
 }
 
 #app {position: absolute; top: 0;bottom: 0;left: 0;right: 0; margin: 0; width: 100%; padding: 0;background: #fff;min-height: 386px}
+
     #header {position: fixed;width: 100%; margin: 0; margin-top: 14px; margin-bottom: 14px; height: 32px; padding: 0;z-index: 0}
-    #header h3 {margin: 0;height: 100%}
-    #header>div {height: 100%}
+        #header>div {height: 100%}
+        #header h3 {margin: 0;height: 100%}
 
-.energy-cells{height: 100%;}
-.energy-cell{display: inline-block;height: 100%;}
+        .energy-cells{height: 100%;}
+            .energy-cell{display: inline-block;height: 100%;}
 
-#content {margin:0;height: 100%; width: 100%;z-index: -1;min-height: 386px}
-#content>div {position: relative; height: 100%;padding: 0;min-height: 240px;padding-bottom: 80px;padding-top: 60px;}
-.mekk {position: relative;left: 50%;margin: 0; margin-left: -120px;top: 50%;margin-top: -120px;height: 240px;width: 240px;}
+    #content {margin:0;height: 100%; width: 100%;z-index: -1;min-height: 386px}
+        #content>div {position: relative; height: 100%;padding: 0;min-height: 240px;padding-bottom: 80px;padding-top: 60px;}
+            .mekk {position: relative;left: 50%;margin: 0; margin-left: -120px;top: 50%;margin-top: -120px;height: 240px;width: 240px;}
 
 
-#footer {position: fixed;bottom: -80px;width: 100%; margin: 0; margin-top: 6px;z-index: 1;overflow: hidden}
-#footer>div {padding: 0;}
-        .tinker-btn {width: 148px;height: 148px;border-radius: 74px;padding-left: 74px; padding-bottom: 74px; margin-left: -74px;border: 0;}
-        .attack-btn {width: 148px;height: 148px;border-radius: 74px;padding-right: 74px; padding-bottom: 74px; margin-right: -74px;border: 0}
+    #footer {position: fixed;bottom: -80px;width: 100%; margin: 0; margin-top: 6px;z-index: 1;overflow: hidden}
+        #footer>div {padding: 0;}
+                .tinker-btn {width: 148px;height: 148px;border-radius: 74px;padding-left: 74px; padding-bottom: 74px; margin-left: -74px;border: 0;}
+                .attack-btn {width: 148px;height: 148px;border-radius: 74px;padding-right: 74px; padding-bottom: 74px; margin-right: -74px;border: 0}
