@@ -20,31 +20,32 @@
       <div id="app" class="container-fluid">
                 <div class="row" id="header">
                     <div class="col-xs-3 text-left">
-                        <button class="btn btn-primary health-btn" id="player-health">
+                        <h3 class="health-label"><span class="label label-primary" id="player-health">
                             <span class="glyphicon glyphicon-heart-empty"></span>   
                             <span class="health-points">100</span>
-                        </button>
+                        </span></h3>
                     </div>
                     
                     <div class="col-xs-6 text-center">
-                        <div class="btn-group">
-                        <button class="btn btn-success energy-cell left">
+                        <h3 class="energy-cells">
+                            <span class="label label-success energy-cell">
                             <span class="glyphicon glyphicon-flash"></span>
-                        </button>
-                        <button class="btn btn-success energy-cell center">
+                        </span>
+                            <span class="label label-success energy-cell">
                             <span class="glyphicon glyphicon-flash"></span>
-                        </button>
-                        <button class="btn  btn-success energy-cell right">
+                        </span>
+                            <span class="label label-success energy-cell">
                             <span class="glyphicon glyphicon-flash"></span>
-                        </button>
-                                                                     </div>
+                        </span>
+                        </h3>
                     </div>
                     
                     <div class="col-xs-3 text-right">
-                        <button class="btn btn-warning health-btn" id="enemy-health">
+                        <h3 class="health-label">
+                            <span class="label label-warning" id="enemy-health">
                             <span class="glyphicon glyphicon-heart-empty"></span>   
-                            <span>100</span>
-                        </button>
+                            <span class="health-points">100</span></span>
+                        </h3>
                     </div>
 
                     
@@ -84,7 +85,7 @@
             $(function(){
                 // code to run on loading of DOM
                 
-                var rechargeSpeed  = 20000;
+                var rechargeSpeed  = 18000;
                 
                 
                  var attackButtonToggle = function(){this.toggleClass('disabled')};
@@ -95,12 +96,12 @@
                     if (!cell.hasClass('disabled'))
                     {
                     cell.addClass('disabled');
-                cell.removeClass('btn-success');
-                cell.addClass('btn-danger');
+                cell.removeClass('label-success');
+                cell.addClass('label-danger');
                 cell.hide();
                 var rechargeComplete = function (){
-                    this.removeClass('btn-danger');
-                    this.addClass('btn-success');
+                    this.removeClass('label-danger');
+                    this.addClass('label-success');
                     this.removeClass('disabled');
                     if ($('.attack-btn').hasClass('disabled')) {
                         attackButtonToggle()};

@@ -1,29 +1,21 @@
 html,body {
-    top: 0;bottom: 0;left: 0;right: 0; margin: 0; padding: 0; margin: 0; border: 0;background: #000
+    top: 0;bottom: 0;left: 0;right: 0; margin: 0; padding: 0; margin: 0; border: 0;background: #000;
 }
 
-#app {position: absolute; top: 0;bottom: 0;left: 0;right: 0; margin: auto; overflow: hidden; width: 100%; min-height: 100%; padding: 0;background: #fff}
-    #header {width: 100%; margin: 0; height: 60px}
-            #header button {}
-            .health-btn {margin-top: 10px}
-                .glyphicon.glyphicon-heart-empty {}
+#app {position: absolute; top: 0;bottom: 0;left: 0;right: 0; margin: 0; width: 100%; padding: 0;background: #fff;min-height: 386px}
+    #header {position: fixed;width: 100%; margin: 0; margin-top: 14px; margin-bottom: 14px; height: 32px; padding: 0;z-index: 0}
+    #header h3 {margin: 0;height: 100%}
+    #header>div {height: 100%}
 
-            .energy-cell {margin-top: 10px;}
-                .glyphicon.glyphicon-flash {}
-                .glyphicon glyphicon-ok-circle {}
-                .glyphicon glyphicon-refresh {}
+.energy-cells{height: 100%;}
+.energy-cell{display: inline-block;height: 100%;}
 
-    #content {height: 100%;padding-bottom: 160px;
-    }
-#content>div {height: 100%}
-        .mekk {position: absolute; margin-left: -120px;margin-top:  -120px; height: 240px;width: 240px; left:50%; top:50%}
-            #player {}
-            #enemy {}
+#content {margin:0;height: 100%; width: 100%;z-index: -1;min-height: 386px}
+#content>div {position: relative; height: 100%;padding: 0;min-height: 240px;padding-bottom: 80px;padding-top: 60px;}
+.mekk {position: relative;left: 50%;margin: 0; margin-left: -120px;top: 50%;margin-top: -120px;height: 240px;width: 240px;}
 
-#footer {bottom: -80px;position: absolute;width: 100%; margin: 0;}
-        .tinker-btn {width: 160px;height: 160px;border-radius: 80px;padding-left: 60px; padding-bottom: 60px; margin-left: -80px;border: 0}
-            .glyphicon glyphicon-briefcase {}
-        .attack-btn {width: 160px;height: 160px;border-radius: 80px;padding-right: 60px; padding-bottom: 60px; margin-right: -80px;border: 0}
-            .glyphicon glyphicon-screenshot {}
 
-.col-xs-6 {margin: 0;border: 0;padding: 0}
+#footer {position: fixed;bottom: -80px;width: 100%; margin: 0; margin-top: 6px;z-index: 1;overflow: hidden}
+#footer>div {padding: 0;}
+        .tinker-btn {width: 148px;height: 148px;border-radius: 74px;padding-left: 74px; padding-bottom: 74px; margin-left: -74px;border: 0;}
+        .attack-btn {width: 148px;height: 148px;border-radius: 74px;padding-right: 74px; padding-bottom: 74px; margin-right: -74px;border: 0}
