@@ -1,27 +1,26 @@
 html,body {
-    position: absolute; top: 0;bottom: 0;left: 0;right: 0; margin: 0; padding: 0; margin: 0; border: 0;background: #000
+    top: 0;bottom: 0;left: 0;right: 0; margin: 0; padding: 0; margin: 0; border: 0;background: #000
 }
 
 #app {position: absolute; top: 0;bottom: 0;left: 0;right: 0; margin: auto; overflow: hidden; width: 100%; min-height: 100%; padding: 0;background: #fff}
-    #header {position: absolute;width: 100%; margin: 0;}
+    #header {width: 100%; margin: 0; height: 60px}
             #header button {}
             .health-btn {margin-top: 10px}
                 .glyphicon.glyphicon-heart-empty {}
-
-            .menu-btn {width: 120px;height: 120px;border-radius: 80px; margin-top: -60px;padding-top: 60px; border: 0}
-                .glyphicon.glyphicon-home {}
 
             .energy-cell {margin-top: 10px;}
                 .glyphicon.glyphicon-flash {}
                 .glyphicon glyphicon-ok-circle {}
                 .glyphicon glyphicon-refresh {}
 
-    #content {}
-        .mekk {}
+    #content {height: 100%;padding-bottom: 160px;
+    }
+#content>div {height: 100%}
+        .mekk {position: absolute; margin-left: -120px;margin-top:  -120px; height: 240px;width: 240px; left:50%; top:50%}
             #player {}
             #enemy {}
 
-#footer {bottom: -80px; position: absolute;width: 100%; margin: 0;}
+#footer {bottom: -80px;position: absolute;width: 100%; margin: 0;}
         .tinker-btn {width: 160px;height: 160px;border-radius: 80px;padding-left: 60px; padding-bottom: 60px; margin-left: -80px;border: 0}
             .glyphicon glyphicon-briefcase {}
         .attack-btn {width: 160px;height: 160px;border-radius: 80px;padding-right: 60px; padding-bottom: 60px; margin-right: -80px;border: 0}
