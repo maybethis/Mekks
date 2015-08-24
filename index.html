@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html><head>
+<html>
+    
+    <head>
         
         <meta charset="utf-8">
 
@@ -7,16 +9,19 @@
         <meta name="description" content="Description of Mekks">
         
         <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-		
-        <link rel="stylesheet" href="css/reset.css"> <!-- HTML5 Boilerplate CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		
-        <!-- styling to move to styles.css -->
-        <style type="text/css">
         
+        <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="css/bootstrap.css">
+        <!--
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        -->
+        
+        <!-- css to move to style.css -->
+        <style type="text/css">
+            
         </style>
     
-    <style type="text/css"></style></head>
+    </head>
 
     <body style="font-size:10
 px;background-color:#eee">
@@ -156,48 +161,61 @@ padding-right: 0px;padding-top: 0px;border-top-width: 0px;margin-top: 0px;top: 0
           
             </div>
         
-		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <script src="http://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+        <!-- Javascript CDN Imports -->
+		<!-- 
+            <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+            <script src="http://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+        -->
         
-        
+        <!-- Local Javascript Imports -->
+            <script src="js/jquery-1.11.3.js"></script>
+            <script src="js/bootstrap.js"></script>
+            <script src="js/parse-1.5.0.js"></script>
         
         <script type="text/template" id="template-example">
-            <div class="template-example" style="position:fixed;left:50%;top:50%;text-align:left;margin-left:-<%= 40/2+templateHTML.length/2 %>ch">template-example loaded with {templateHTML:<%= templateHTML %>}</div>
-        </script>
-        <script>
-
-         /* _.template example js usage
-
-            // code must be run after DOM & body scripts load if referencing elements
-            $(function(root) {
-
-                // underscore is included in Parse.js & Backbone.js as a class member, if it's not in the root scope, use Parse._
-                this._ = root._ || Parse._;
-
-                // store the _.template(templateHTML) and call later
-                var templateExample = _.template($('#template-example').html());
-
-                // using templateVariable({key:'value'}) to make new templated elements
-                var templateExampleElement = templateExample({templateHTML: "HTML Yeah boyeeee"});
-
-                // append the template either directly to the DOM or to a Parse.View
-                $('body').append(templateExampleElement);
-
-                // make sure to include a class or id so the templated element can be found with $(selector)
-                // $('.template-example').remove();
-
-            }(this));
-
-        end of _.template example */
-
+            <div class="template-example" style="position:fixed;left:50%;top:50%;text-align:left;margin-left:-<%= 40/2+templateHTML.length/2 %>ch">
+                template-example loaded with {templateHTML:<%= templateHTML %>}
+            </div>
         </script>
         
+        <!-- 
+            <script>
+
+             /* _.template example js usage
+
+                // code must be run after DOM & body scripts load if referencing elements
+                $(function(root) {
+
+                    // underscore is included in Parse.js & Backbone.js as a class member, if it's not in the root scope, use Parse._
+                    this._ = root._ || Parse._;
+
+                    // store the _.template(templateHTML) and call later
+                    var templateExample = _.template($('#template-example').html());
+
+                    // using templateVariable({key:'value'}) to make new templated elements
+                    var templateExampleElement = templateExample({templateHTML: "HTML Yeah boyeeee"});
+
+                    // append the template either directly to the DOM or to a Parse.View
+                    $('body').append(templateExampleElement);
+
+                    // make sure to include a class or id so the templated element can be found with $(selector)
+                    // $('.template-example').remove();
+
+                }(this));
+
+            end of _.template example */
+
+            </script>
+        -->
+
         <script>            
+        
             // code to run on loading of DOM & jQuery or contained in '<body>' scripts
             $(function(){
                 
                 var rechargeSpeed  = 18000;
+                var globalButtonCooldown = 2000;
                 
                 
                  var attackButtonToggle = function(){this.toggleClass('disabled')};
@@ -206,6 +224,9 @@ padding-right: 0px;padding-top: 0px;border-top-width: 0px;margin-top: 0px;top: 0
                 
                  var tinkerButtonToggle = function(){this.toggleClass('disabled')};
                     tinkerButtonToggle = tinkerButtonToggle.bind($('.tinker-btn'));
+                
+                var attackAndTinkerButtonToggle = function(){tinkerButtonToggle();
+                                                             attackButtonToggle();}
                 
                 function useEnergyCell(cell) {
                     cell = $(cell);
@@ -220,10 +241,10 @@ padding-right: 0px;padding-top: 0px;border-top-width: 0px;margin-top: 0px;top: 0
                     cell.addClass('btn-success');
                     this.removeClass('used');
                     if ($('.attack-btn').hasClass('disabled')) {
-                        attackButtonToggle();
+                                attackButtonToggle();
                     };
                     if ($('.tinker-btn').hasClass('disabled')) {
-                        tinkerButtonToggle();
+                                tinkerButtonToggle();
                     };
                 }
                         
@@ -240,7 +261,7 @@ padding-right: 0px;padding-top: 0px;border-top-width: 0px;margin-top: 0px;top: 0
                     rechargeComplete = rechargeComplete.bind(cell);
                     fadeOutToDanger = fadeOutToDanger.bind(cell);
 					
-                    cell.fadeTo(1000,0.0,fadeOutToDanger);
+                    cell.fadeTo(globalButtonCooldown,0.0,fadeOutToDanger);
                     }
                 
                 
@@ -250,18 +271,23 @@ padding-right: 0px;padding-top: 0px;border-top-width: 0px;margin-top: 0px;top: 0
                 
                 function attackButtonClicked(e){
                    
-                    if (!$('attack-btn').hasClass('disabled'))
+                    if ($('.attack-btn').hasClass('disabled'))
                     {
+                        return;
+                    } else {
+                        
                     var cells = $('.energy-cell').toArray();
                     for (var cell in cells)
                     {
                         if (!$(cells[cell]).hasClass('used'))
                         {
                             useEnergyCell(cells[cell]);
-                            if ($('.energy-cell.used').toArray().length == cells.length)
+                            if ($('.energy-cell.used').toArray().length != cells.length)
                             {
-                                attackButtonToggle();
-                                tinkerButtonToggle();
+                                // attackAndTinkerButtonToggle();
+                                // setTimeout(attackAndTinkerButtonToggle,globalButtonCooldown);
+                            } else {
+                               attackAndTinkerButtonToggle();
                             }
                             return;
                         }
@@ -271,18 +297,22 @@ padding-right: 0px;padding-top: 0px;border-top-width: 0px;margin-top: 0px;top: 0
                 
                 function tinkerButtonClicked(e){
                    
-                    if (!$('tinker-btn').hasClass('disabled'))
+                    if ($('.tinker-btn').hasClass('disabled'))
                     {
-                    var cells = $('.energy-cell').toArray();
+                        return;
+                    } else {
+                        var cells = $('.energy-cell').toArray();
                     for (var cell in cells)
                     {
                         if (!$(cells[cell]).hasClass('used'))
                         {
                             useEnergyCell(cells[cell]);
-                            if ($('.energy-cell.used').toArray().length == cells.length)
+                            if ($('.energy-cell.used').toArray().length != cells.length)
                             {
-                                attackButtonToggle();
-                                tinkerButtonToggle();
+                                // attackAndTinkerButtonToggle();
+                                // setTimeout(attackAndTinkerButtonToggle,globalButtonCooldown);
+                            } else {
+                                attackAndTinkerButtonToggle();
                             }
                             return;
                         }
@@ -294,9 +324,10 @@ padding-right: 0px;padding-top: 0px;border-top-width: 0px;margin-top: 0px;top: 0
                 $('.attack-btn').on('click',attackButtonClicked);
                 $('.tinker-btn').on('click',tinkerButtonClicked);
             
-            });</script>
-        
+            });
     
-
-
-</body></html>
+        </script>        
+        
+    </body>
+    
+</html>
