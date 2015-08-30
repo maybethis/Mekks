@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html><head>
+        
+        <meta charset="utf-8">
+
+        <title>Mekks</title>
+        <meta name="description" content="Description of Mekks">
+        
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		
+    <style type="text/css"></style>
+    
+    </head>
+
+    <body style="font-size:10
+px;">
+        
+      <div id="app" class="container-fluid" style="
+position: absolute;
+overflow: hidden;
+width: 320px;
+height: 320px;
+padding: 0; margin:0; border:0;left:50%;margin-left:-160px;top:50%;margin-top:-160px">
+          
+                <div class="row" id="header" style="position:relative;height:20px;padding-top: 0px;padding-bottom: 0px;margin-top: 10px;margin-bottom: 10px;">
+                    
+                    <div class="col-xs-4 text-left" style="position: relative;
+padding-left: 0px;
+height: 100%;padding-right: 0px;"><div class="btn-group btn-group-xs" style="
+    margin-left: 20px;
+">
+  <button class="btn btn-info disabled" style="position: relative; height: 100%; cursor:initial; opacity:1;"><span class="glyphicon glyphicon-heart-empty"></span><span class="glyphicon glyphicon-warning-sign hidden"></span></button>                      
+                        
+                        
+                    <button class="btn btn-info disabled" style="position: relative;
+height: 100%;
+cursor: initial;
+opacity: 1;">
+<span class="badge health" style="&nbsp;opacity:1;">100</span>
+<span class="badge damage hidden">-00</span></button>
+</div>
+</div>
+                    
+                    <div class="col-xs-4 text-center" style="&nbsp;position: relative; padding-left: 0px; height: 100%;padding-right: 0px;&nbsp;">
+                        <div class="btn-group btn-group-xs" style="position: relative; height: 100%; padding-top: 0px;">
+                        <button class="btn disabled energy-cell btn-success" style="position: relative; height: 100%; opacity: 1; display: inline-block; cursor: initial;">
+                                <span class="glyphicon glyphicon-flash"></span>
+                            </button><button class="btn disabled energy-cell btn-success" style="position: relative; height: 100%; opacity: 1; display: inline-block; cursor: initial;">
+                                <span class="glyphicon glyphicon-flash"></span>
+                            </button><button class="btn disabled energy-cell btn-success" style="position: relative; height: 100%; opacity: 1; display: inline-block; cursor: initial;">
+                                <span class="glyphicon glyphicon-flash"></span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    
+
+                    
+<div class="col-xs-4 text-right" style="&nbsp;position: relative; padding-left: 0px; height: 100%;padding-right: 0px;&nbsp;">
+    <div class=" btn-group btn-group-xs" style="margin-right:20px;">
+  <button class="btn btn-warning disabled" style="position: relative; height: 100%; opacity:1;">
+<span class="badge health">100</span>
+<span class="badge damage hidden">-00</span></button>
+
+<button class="btn btn-warning disabled" style="position: relative; height: 100%; opacity:1;"><span class="glyphicon glyphicon-heart-empty"></span><span class="glyphicon glyphicon-warning-sign hidden"></span></button></div></div>
+                      
+                        
+                </div>
+
+                <div class="row" id="content">
+                    
+                    <div class="col-xs-6" style="display:table;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+">
+                        
+                        <div class="text-center" style="display: table-cell; vertical-align: middle; height: 100%; width:100%; position:relative;">
+<div id="enemy" class="mekk" style="
+    position:relative;
+    margin:auto;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+"></div>
+</div>
+                        
+                    </div>
+                    
+                    <div class="col-xs-6">
+                        
+                        <div class="mekk" id="enemy">
+
+                        </div>
+                        
+                    </div>
+                    
+                </div> 
+          
+                <div class="row" id="footer" style="position:absolute;bottom: 0;width:320px;margin-left: 0px;margin-right: 0px;overflow:hidden;">
+                    
+                    <div class="col-xs-6 text-left" style="position:relative;left: -15px;">
+                        
+                        <button class="btn btn-primary tinker-btn" style="width: 82px; height: 82px; padding-right: 0px; padding-top: 0px; padding-left: 30px; padding-bottom: 30px; border-radius:60px; margin-left: -40px; margin-bottom: -40px; ">
+                            <span class="glyphicon glyphicon-cog"></span>
+                        </button>
+                        
+                    </div>
+                    
+                    <div class="col-xs-6 text-right" style="position:relative; right: -15px;
+">
+                        
+                        <button class="btn btn-danger attack-btn" style="width: 82px; height: 82px; padding-left: 0px; padding-top: 0px; padding-right: 30px; padding-bottom: 30px; border-radius:60px; margin-right: -40px; margin-bottom: -40px;&nbsp;">
+                            <span class="glyphicon glyphicon-screenshot"></span>
+                        </button>
+                        
+                    </div>
+                    
+                </div>
+          
+            </div>
+        
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="http://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+        
+        
+        
+        <script type="text/template" id="template-example">
+            <div class="template-example" style="position:fixed;left:50%;top:50%;text-align:left;margin-left:-<%= 40/2+templateHTML.length/2 %>ch">template-example loaded with {templateHTML:<%= templateHTML %>}</div>
+        </script>
+        <script>
+
+         /* _.template example js usage
+
+            // code must be run after DOM & body scripts load if referencing elements
+            $(function(root) {
+
+                // underscore is included in Parse.js & Backbone.js as a class member, if it's not in the root scope, use Parse._
+                this._ = root._ || Parse._;
+
+                // store the _.template(templateHTML) and call later
+                var templateExample = _.template($('#template-example').html());
+
+                // using templateVariable({key:'value'}) to make new templated elements
+                var templateExampleElement = templateExample({templateHTML: "HTML Yeah boyeeee"});
+
+                // append the template either directly to the DOM or to a Parse.View
+                $('body').append(templateExampleElement);
+
+                // make sure to include a class or id so the templated element can be found with $(selector)
+                // $('.template-example').remove();
+
+            }(this));
+
+        end of _.template example */
+
+        </script>
+        
+        <script>            
+            // code to run on loading of DOM & jQuery or contained in '<body>' scripts
+            $(function(){
+                
+                var rechargeSpeed  = 18000;
+                
+                
+                 var attackButtonToggle = function(){this.toggleClass('disabled')};
+                    attackButtonToggle = attackButtonToggle.bind($('.attack-btn'));
+                
+                
+                 var tinkerButtonToggle = function(){this.toggleClass('disabled')};
+                    tinkerButtonToggle = tinkerButtonToggle.bind($('.tinker-btn'));
+                
+                function useEnergyCell(cell) {
+                    cell = $(cell);
+                    if (!cell.hasClass('used'))
+                    {
+                    cell.addClass('used');
+                cell.removeClass('btn-success');
+                cell.addClass('btn-warning');
+                        };
+                    var rechargeComplete = function (){
+                    this.removeClass('btn-default');
+                    cell.addClass('btn-success');
+                    this.removeClass('used');
+                    if ($('.attack-btn').hasClass('disabled')) {
+                        attackButtonToggle();
+                    };
+                    if ($('.tinker-btn').hasClass('disabled')) {
+                        tinkerButtonToggle();
+                    };
+                }
+                        
+                        var rechargeHalf = function (){
+                        this.fadeTo(rechargeSpeed/2,1.0,rechargeComplete);
+                        }
+                        
+                        var fadeOutToDanger = function (){
+                        this.removeClass('btn-warning');
+                        cell.addClass('btn-default');
+                        this.fadeTo(rechargeSpeed/2,0.5,rechargeHalf);
+                        }
+                    rechargeHalf = rechargeHalf.bind(cell);
+                    rechargeComplete = rechargeComplete.bind(cell);
+                    fadeOutToDanger = fadeOutToDanger.bind(cell);
+					
+                    cell.fadeTo(1000,0.0,fadeOutToDanger);
+                    }
+                
+                
+                function energyCellClicked(e) {
+                    useEnergyCell($(e.currentTarget));
+                }
+                
+                function attackButtonClicked(e){
+                   
+                    if (!$('attack-btn').hasClass('disabled'))
+                    {
+                    var cells = $('.energy-cell').toArray();
+                    for (var cell in cells)
+                    {
+                        if (!$(cells[cell]).hasClass('used'))
+                        {
+                            useEnergyCell(cells[cell]);
+                            if ($('.energy-cell.used').toArray().length == cells.length)
+                            {
+                                attackButtonToggle();
+                                tinkerButtonToggle();
+                            }
+                            return;
+                        }
+                        }
+                    }
+                }
+                
+                function tinkerButtonClicked(e){
+                   
+                    if (!$('tinker-btn').hasClass('disabled'))
+                    {
+                    var cells = $('.energy-cell').toArray();
+                    for (var cell in cells)
+                    {
+                        if (!$(cells[cell]).hasClass('used'))
+                        {
+                            useEnergyCell(cells[cell]);
+                            if ($('.energy-cell.used').toArray().length == cells.length)
+                            {
+                                attackButtonToggle();
+                                tinkerButtonToggle();
+                            }
+                            return;
+                        }
+                        }
+                    }
+                    
+                }
+                
+                $('.attack-btn').on('click',attackButtonClicked);
+                $('.tinker-btn').on('click',tinkerButtonClicked);
+            
+            });</script>
+        
+    
+
+
+</body></html>
