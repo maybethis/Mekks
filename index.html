@@ -7,16 +7,19 @@
         <meta name="description" content="Description of Mekks">
         
         <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-		
-        <link rel="stylesheet" href="css/reset.css"> <!-- HTML5 Boilerplate CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		
-        <!-- styling to move to styles.css -->
-        <style type="text/css">
         
+        <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="css/bootstrap.css">
+        <!--
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        -->
+        
+        <!-- css to move to style.css -->
+        <style type="text/css">
+            
         </style>
     
-    </head>
+    <style type="text/css"></style></head>
 
     <body style="font-size:10
 px;background-color:#eee">
@@ -28,32 +31,56 @@ width: 320px;
 height: 320px;
 padding: 0; margin:0; border:0;left:50%;margin-left:-160px;top:50%;margin-top:-160px;background-color:#fff">
           
-                <div class="row" id="header" style="position:relative;height:20px;padding-top: 0px;padding-bottom: 0px;margin-top: 10px;margin-bottom: 10px;">
+                <div class="row" id="header" style="position: absolute;
+height: 22px;
+padding-top: 0px;
+padding-bottom: 0px;
+margin-top: 9px;
+margin-bottom: 9px;
+margin-right: 0px;
+margin-left: 0px;
+width:100%;">
                     
                     <div class="col-xs-4 text-left" style="position: relative;
 padding-left: 0px;
-height: 100%;padding-right: 0px;"><div class="btn-group btn-group-xs" style="
-    margin-left: 20px;
+height: 100%;padding-right: 0px;"><div class="btn-group btn-group-xs" style="position:relative;
+    margin-left: 10px;
+    height: 100%;
 ">
-  <button class="btn btn-info disabled" style="position: relative; height: 100%; cursor:initial; opacity:1;"><span class="glyphicon glyphicon-heart-empty"></span><span class="glyphicon glyphicon-warning-sign hidden"></span></button>                      
+  <button class="btn btn-info disabled" style="position: relative; height: 100%; cursor:initial; opacity:1;padding-top: 0px;padding-bottom: 0px;border-left-width: 0px;border-top-width: 0px;border-right-width: 0px;border-bottom-width: 0px;"><span class="glyphicon glyphicon-heart-empty" style="
+    padding-top: 0px;
+"></span><span class="glyphicon glyphicon-warning-sign hidden"></span></button>                      
                         
                         
                     <button class="btn btn-info disabled" style="position: relative;
 height: 100%;
+width: 40px;
 cursor: initial;
-opacity: 1;">
-<span class="badge health" style="opacity:1;">100</span>
-<span class="badge damage hidden">-00</span></button>
+opacity: 1;
+padding-top: 0px;
+padding-bottom: 0px;
+padding-left: 0px;padding-right: 0px;margin-left: 0px;border-top-width: 0px;border-right-width: 0px;border-bottom-width: 0px;border-left-width: 0px;">
+<span class="badge damage hidden" style="position:absolute;
+opacity: 1;
+border-top-width: 0px;
+padding-top: 0px;
+top: 50%;
+left:50%;
+margin-top: -0.5em;
+margin-left: -15px;
+height:12px;
+width:30px;padding-left: 0px;padding-bottom: 0px;padding-right: 0px;">-00</span><span class="badge health" style="position:absolute; opacity: 1; border-top-width: 0px; padding-top: 0px; top: 50%; left:50%; margin-top: -0.5em; margin-left: -15px; height:12px; width:30px;padding-left: 0px;padding-bottom: 0px;padding-right: 0px;">100</span>
+</button>
 </div>
 </div>
                     
                     <div class="col-xs-4 text-center" style="&nbsp;position: relative; padding-left: 0px; height: 100%;padding-right: 0px;&nbsp;">
                         <div class="btn-group btn-group-xs" style="position: relative; height: 100%; padding-top: 0px;">
-                        <button class="btn disabled energy-cell btn-success" style="position: relative; height: 100%; opacity: 1; display: inline-block; cursor: initial;">
+                        <button class="btn disabled energy-cell btn-success" style="position: relative; height: 100%; opacity: 1; display: inline-block; cursor: initial; border: 0px;">
                                 <span class="glyphicon glyphicon-flash"></span>
-                            </button><button class="btn disabled energy-cell btn-success" style="position: relative; height: 100%; opacity: 1; display: inline-block; cursor: initial;">
+                            </button><button class="btn disabled energy-cell btn-success" style="position: relative; height: 100%; opacity: 1; display: inline-block; cursor: initial; border: 0px; margin: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;">
                                 <span class="glyphicon glyphicon-flash"></span>
-                            </button><button class="btn disabled energy-cell btn-success" style="position: relative; height: 100%; opacity: 1; display: inline-block; cursor: initial;">
+                            </button><button class="btn disabled energy-cell btn-success" style="position: relative; height: 100%; opacity: 1; display: inline-block; cursor: initial; border: 0px; margin: 0px;">
                                 <span class="glyphicon glyphicon-flash"></span>
                             </button>
                         </div>
@@ -62,66 +89,155 @@ opacity: 1;">
                     
 
                     
-<div class="col-xs-4 text-right" style="&nbsp;position: relative; padding-left: 0px; height: 100%;padding-right: 0px;&nbsp;">
-    <div class=" btn-group btn-group-xs" style="margin-right:20px;">
-  <button class="btn btn-warning disabled" style="position: relative; height: 100%; opacity:1; cursor:initial;">
-<span class="badge health">100</span>
-<span class="badge damage hidden">-00</span></button>
+<div class="col-xs-4 text-right" style="position: relative;
+padding-left: 0px;
+height: 100%;
+padding-right: 0px;padding-top: 0px;border-top-width: 0px;margin-top: 0px;top: 0px;">
+    <div class=" btn-group btn-group-xs" style="position:relative;
+    margin-right: 10px;
+    height: 100%;">
+  <button class="btn btn-warning disabled" style="position: relative; height: 100%; width: 40px; cursor: initial; opacity: 1; padding-top: 0px; padding-bottom: 0px; padding-left: 0px;padding-right: 0px;border-top-width: 0px;border-right-width: 0px;border-bottom-width: 0px;border-left-width: 0px;">
+<span class="badge damage hidden" style="position:absolute; opacity: 1; border-top-width: 0px; padding-top: 0px; top: 50%; left:50%; margin-top: -0.5em; margin-left: -15px; height:12px; width:30px;padding-left: 0px;padding-bottom: 0px;padding-right: 0px;">-00</span><span class="badge health" style="position:absolute; opacity: 1; border-top-width: 0px; padding-top: 0px; top: 50%; left:50%; margin-top: -0.5em; margin-left: -15px; height:12px; width:30px;padding-left: 0px;padding-bottom: 0px;padding-right: 0px;">100</span>
+</button>
 
-<button class="btn btn-warning disabled" style="position: relative; height: 100%; opacity:1; cursor:initial;"><span class="glyphicon glyphicon-heart-empty"></span><span class="glyphicon glyphicon-warning-sign hidden"></span></button></div></div>
+<button class="btn btn-warning disabled" style="position: relative; height: 100%; opacity:1; cursor:initial;padding-top: 0px;padding-bottom: 0px;padding-left: 5px;border-right-width: 0px;border-top-width: 0px;border-bottom-width: 0px;border-left-width: 0px;margin-left: 0px;"><span class="glyphicon glyphicon-heart-empty"></span><span class="glyphicon glyphicon-warning-sign hidden"></span></button></div></div>
                       
                         
                 </div>
 
-                <div class="row" id="content">
+                <div class="row" id="content" style="height:100%;
+position:absolute;
+width:100%;
+margin:0; padding: 40px 0;">
                     
                     <div class="col-xs-6" style="display:table;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
+padding: 0;
+margin: 0;
+height:100%;
+position:relative;
 ">
                         
-                        <div class="text-center" style="display: table-cell; vertical-align: middle; height: 100%; width:100%; position:relative;">
-<div id="enemy" class="mekk" style="
+                        <div class="cell-wrapper" style="display: table-cell; vertical-align: middle;position:relative;">
+<div id="player" class="mekk" style="
     position:relative;
-    margin:auto;
-    left: 0px;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-"></div>
+    margin:auto; height:150px; width:150px;"></div>
 </div>
                         
                     </div>
                     
-                    <div class="col-xs-6">
+                    <div class="col-xs-6" style="display:table;
+padding: 0;
+margin: 0;
+height:100%;
+position:relative;
+">
                         
-                        <div class="mekk" id="enemy">
-
-                        </div>
+                        <div class="cell-wrapper" style="display: table-cell; vertical-align: middle;position:relative;">
+<div id="enemy" class="mekk" style="
+    position:relative;
+    margin:auto; height:150px; width:150px;"></div>
+</div>
                         
                     </div>
+
                     
                 </div> 
           
-                <div class="row" id="footer" style="position:absolute;bottom: 0;width:320px;margin-left: 0px;margin-right: 0px;overflow:hidden;">
+                <div class="row" id="footer" style="position: absolute;
+bottom: 0;
+width: 320px;
+margin-left: 0px;
+margin-right: 0px;
+overflow: hidden;
+height: 40px;
+padding-top: 10px;width:100%;">
                     
-                    <div class="col-xs-6 text-left" style="position:relative;left: -15px;">
+                    <div class="col-xs-4 text-left" style="position: relative;
+padding:0; height:100%; /* left: -15px; */">
                         
-                        <button class="btn btn-primary tinker-btn" style="width: 82px; height: 82px; padding-right: 0px; padding-top: 0px; padding-left: 30px; padding-bottom: 30px; border-radius:60px; margin-left: -40px; margin-bottom: -40px; ">
-                            <span class="glyphicon glyphicon-cog"></span>
+                        <button class="btn btn-primary left-btn tinker-btn" style="padding-left: 30px;padding-bottom: 40px;padding-right: 10px;padding-top: 10px;position: relative; margin: auto; height: 60px; width: 60px; border-radius: 10px;padding: 7.5px 7.5px 37.5px 37.5px;border-width: 0px;left: -30px;bottom: -30px; top:0;" id="left-btn">
+                            <span class="glyphicon glyphicon-cog" id="left-btn-icon" style="font-size:15px;line-height:15px;width:15px;height:15px;top: 0px;"></span>
                         </button>
+
+
                         
                     </div>
+<div class="col-xs-4 text-center" style="padding-top: 10px;position: relative;
+height: 100%; padding:0;display:table;">
+<div class="cell-wrapper well elements-tray fade" style="vertical-align: middle;
+display: table-cell;
+margin: auto;
+height: 100%;
+position: relative;
+padding-top: 0px;
+padding-left: 0px;
+padding-right: 0px;
+padding-bottom: 0px;
+border-bottom-right-radius: 0;
+border-bottom-left-radius: 0;">
+                        <div class="btn-group btn-group-xs text-center elements" style="margin-top: -1px;position: relative;
+height: 75%;
+width: auto;
+margin: auto;
+bottom: 0;
+top: 0px;
+padding-bottom: 0px;">
+                        <button class="btn btn-default fire-btn" style="position: relative;
+height: 100%;
+opacity: 1;
+display: inline-block;
+cursor: initial;
+width: 30px;
+border-width: 1px;
+border-radius: 10px;
+padding-right: 0px;
+padding-left: 0px;
+margin-right: 1px;
+padding-bottom: 0px;
+padding-top: 1px;
+margin-left: 1px;margin-left: 1px;margin-top: 0px;">
+                                <span class="glyphicon glyphicon-fire text-danger" style="
+    padding-top: 2px;
+"></span>
+                            </button><button class="btn btn-default leaf-btn" style="position: relative;
+height: 100%;
+opacity: 1;
+display: inline-block;
+cursor: initial;
+width: 30px;
+border-width: 1px;
+margin-left: 1px;
+                                border-radius:10px;
+/* margin-right: 1px; */
+/* padding-left: 2px; */
+/* padding-right: 2px; */;padding-left: 0px;padding-right: 0px;padding-top: 2px;padding-bottom: 0px;margin-right: 1px;">
+                                <span class="glyphicon glyphicon-leaf text-success" style="
+    border-top-width: 1px;
+"></span>
+                            </button><button class="btn btn-default water-btn" style="position: relative;
+height: 100%;
+opacity: 1;
+display: inline-block;
+cursor: initial;
+width: 30px;
+border-width: 1px;
+margin-left: 1px;
+border-radius: 10px;
+margin-right: 0px;
+padding-right: 0px;
+padding-left: 0px;margin-top: 0px;padding-bottom: 0px;padding-top: 2px;">
+                                <span class="glyphicon glyphicon-tint text-primary"></span>
+                            </button>
+                        </div>
+                    </div>
+</div>
+
                     
-                    <div class="col-xs-6 text-right" style="position:relative; right: -15px;
-">
+                    <div class="col-xs-4 text-right" style="position: relative;
+padding:0; height:100%; /* right: -15px; */">
                         
-                        <button class="btn btn-danger attack-btn" style="width: 82px; height: 82px; padding-left: 0px; padding-top: 0px; padding-right: 30px; padding-bottom: 30px; border-radius:60px; margin-right: -40px; margin-bottom: -40px;&nbsp;">
-                            <span class="glyphicon glyphicon-screenshot"></span>
+                        <button class="btn btn-danger right-btn attack-btn" style="position: relative; margin: auto; height: 60px; width: 60px; border-radius: 10px;padding: 7.5px 37.5px 37.5px 7.5px;border-width: 0px;right: -30px;bottom: -30px; top:0;" id="right-btn">
+                            <span class="glyphicon glyphicon-screenshot fade in" id="right-btn-icon" style="font-size:15px;line-height:15px;width:15px;height:15px;top: 0px;"></span>
                         </button>
                         
                     </div>
@@ -130,48 +246,67 @@ opacity: 1;">
           
             </div>
         
-		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <script src="http://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+        <!-- Javascript CDN Imports -->
+		<!-- 
+            <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+            <script src="http://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+        -->
         
-        
+        <!-- Local Javascript Imports -->
+            <script src="js/jquery-1.11.3.js"></script>
+            <script src="js/bootstrap.js"></script>
+            <script src="js/parse-1.5.0.js"></script>
         
         <script type="text/template" id="template-example">
-            <div class="template-example" style="position:fixed;left:50%;top:50%;text-align:left;margin-left:-<%= 40/2+templateHTML.length/2 %>ch">template-example loaded with {templateHTML:<%= templateHTML %>}</div>
-        </script>
-        <script>
-
-         /* _.template example js usage
-
-            // code must be run after DOM & body scripts load if referencing elements
-            $(function(root) {
-
-                // underscore is included in Parse.js & Backbone.js as a class member, if it's not in the root scope, use Parse._
-                this._ = root._ || Parse._;
-
-                // store the _.template(templateHTML) and call later
-                var templateExample = _.template($('#template-example').html());
-
-                // using templateVariable({key:'value'}) to make new templated elements
-                var templateExampleElement = templateExample({templateHTML: "HTML Yeah boyeeee"});
-
-                // append the template either directly to the DOM or to a Parse.View
-                $('body').append(templateExampleElement);
-
-                // make sure to include a class or id so the templated element can be found with $(selector)
-                // $('.template-example').remove();
-
-            }(this));
-
-        end of _.template example */
-
+            <div class="template-example" style="position:fixed;left:50%;top:50%;text-align:left;margin-left:-<%= 40/2+templateHTML.length/2 %>ch">
+                template-example loaded with {templateHTML:<%= templateHTML %>}
+            </div>
         </script>
         
+        <script type="text/template" id="template-circle-button">
+            <div class="template-example" style="position:fixed;left:50%;top:50%;text-align:left;margin-left:-<%= 40/2+templateHTML.length/2 %>ch">
+                template-example loaded with {templateHTML:<%= templateHTML %>}
+            </div>
+        </script>
+        
+        <!-- 
+            <script>
+
+             /* _.template example js usage
+
+                // code must be run after DOM & body scripts load if referencing elements
+                $(function(root) {
+
+                    // underscore is included in Parse.js & Backbone.js as a class member, if it's not in the root scope, use Parse._
+                    this._ = root._ || Parse._;
+
+                    // store the _.template(templateHTML) and call later
+                    var templateExample = _.template($('#template-example').html());
+
+                    // using templateVariable({key:'value'}) to make new templated elements
+                    var templateExampleElement = templateExample({templateHTML: "HTML Yeah boyeeee"});
+
+                    // append the template either directly to the DOM or to a Parse.View
+                    $('body').append(templateExampleElement);
+
+                    // make sure to include a class or id so the templated element can be found with $(selector)
+                    // $('.template-example').remove();
+
+                }(this));
+
+            end of _.template example */
+
+            </script>
+        -->
+
         <script>            
+        
             // code to run on loading of DOM & jQuery or contained in '<body>' scripts
             $(function(){
                 
                 var rechargeSpeed  = 18000;
+                var globalButtonCooldown = 2000;
                 
                 
                  var attackButtonToggle = function(){this.toggleClass('disabled')};
@@ -180,6 +315,9 @@ opacity: 1;">
                 
                  var tinkerButtonToggle = function(){this.toggleClass('disabled')};
                     tinkerButtonToggle = tinkerButtonToggle.bind($('.tinker-btn'));
+                
+                var attackAndTinkerButtonToggle = function(){tinkerButtonToggle();
+                                                             attackButtonToggle();}
                 
                 function useEnergyCell(cell) {
                     cell = $(cell);
@@ -194,10 +332,10 @@ opacity: 1;">
                     cell.addClass('btn-success');
                     this.removeClass('used');
                     if ($('.attack-btn').hasClass('disabled')) {
-                        attackButtonToggle();
+                                attackButtonToggle();
                     };
                     if ($('.tinker-btn').hasClass('disabled')) {
-                        tinkerButtonToggle();
+                                tinkerButtonToggle();
                     };
                 }
                         
@@ -214,63 +352,80 @@ opacity: 1;">
                     rechargeComplete = rechargeComplete.bind(cell);
                     fadeOutToDanger = fadeOutToDanger.bind(cell);
 					
-                    cell.fadeTo(1000,0.0,fadeOutToDanger);
+                    cell.fadeTo(globalButtonCooldown,0.0,fadeOutToDanger);
                     }
                 
-                
-                function energyCellClicked(e) {
-                    useEnergyCell($(e.currentTarget));
+                var energyUsingButtonClicked = function(e) {
+                    
+                    var buttonClicked = e.currentTarget;
+                    if ($(buttonClicked).hasClass('disabled'))
+                    {
+                        return;
+                    } else {
+                        
+                    var cells = $('.energy-cell').toArray();
+                    for (var cell in cells)
+                    {
+                        if (!$(cells[cell]).hasClass('used'))
+                        {
+                            useEnergyCell(cells[cell]);
+                            if ($('.energy-cell.used').toArray().length != cells.length)
+                            {
+                                // still energy left to be used
+                            } else {
+                                // out of energy
+                               attackAndTinkerButtonToggle();
+                            }
+                            return;
+                        }
+                        }
+                    }
                 }
                 
                 function attackButtonClicked(e){
-                   
-                    if (!$('attack-btn').hasClass('disabled'))
-                    {
-                    var cells = $('.energy-cell').toArray();
-                    for (var cell in cells)
-                    {
-                        if (!$(cells[cell]).hasClass('used'))
-                        {
-                            useEnergyCell(cells[cell]);
-                            if ($('.energy-cell.used').toArray().length == cells.length)
-                            {
-                                attackButtonToggle();
-                                tinkerButtonToggle();
-                            }
-                            return;
-                        }
-                        }
-                    }
+                    energyUsingButtonClicked(e);
                 }
                 
                 function tinkerButtonClicked(e){
-                   
-                    if (!$('tinker-btn').hasClass('disabled'))
-                    {
-                    var cells = $('.energy-cell').toArray();
-                    for (var cell in cells)
-                    {
-                        if (!$(cells[cell]).hasClass('used'))
-                        {
-                            useEnergyCell(cells[cell]);
-                            if ($('.energy-cell.used').toArray().length == cells.length)
-                            {
-                                attackButtonToggle();
-                                tinkerButtonToggle();
-                            }
-                            return;
-                        }
-                        }
-                    }
-                    
+                    energyUsingButtonClicked(e);
                 }
                 
                 $('.attack-btn').on('click',attackButtonClicked);
                 $('.tinker-btn').on('click',tinkerButtonClicked);
             
-            });</script>
+                var bottomLeftCircleButtonView = Parse.View.extend({
+                initialize: function(options)
+                    {
+                        if (!options) {
+                            options = {};
+                        }
+                        
+                        this.top = options.top || null;
+                        this.bottom = options.bottom  || null;
+                        this.left = options.left || null;
+                        this.right = options.right  || null;
+                        this.radius = options.radius || 30;
+                        
+                        this.render();
+                        
+                        return this;
+                    },
+                render: function () {
+                    var theDiv = $('<div></div>');
+                        $(theDiv).addClass('btn btn-primary');
+                        $(theDiv).attr('style','position: absolute; margin: auto; height: 60px; width: 60px; border-radius: 10px;padding: 7.5px 7.5px 37.5px 37.5px;border-width: 0px;left: -30px;bottom: -30px;');
+                        $(theDiv).html('<span class="glyphicon glyphicon-remove" style="font-size:15px;line-height:15px;width:15px;height:15px;top: 0px;margin:0;padding:0;border:0;"></span>');
+                        $(this.el).css('overflow','hidden');
+                        $(theDiv).appendTo(this.el);
+                    
+                    return this;
+                    }
+                });
+                
+            });
+    
+        </script>        
         
     
-
-
+    
 </body></html>
