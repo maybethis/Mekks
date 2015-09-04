@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,96 +16,107 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   <style type="text/css">
-      .window {display:table; width: 100vw; height:100vh; text-align: center; vertical-align: middle;}
-      .app {display:inline-block; width: 960px; height:640px; left: -480px; margin-left: 50vw; top: -320px; margin-top: 50vh; position: absolute;}
-      .header {width: 100%; height:80px;}
+      body {
+            height:100%;
+            width: 100%;
+            }
+      .window {width: 100%; height: 100%; position: absolute; display: table;}
+      .app-centered {display: table-cell; width: 100%; height: 100%;  vertical-align: middle;}
+      .app-wrapper {display: block; width: 100%;height:100%;text-align: center;min-height: 640px; max-height:640px;}
+      .app {display: block; width: 100%; height:100%; margin: auto; min-width: 960px; max-width: 960px;}
+      .header {width: 100%; height:12.5%;}
       .label-lg {}
       .health {}
-      .mekks{height:480px;width:100%;}
+      .mekks{height:75%;width:100%; font-size:16px;}
       .mekk{display: inline-block; width: 50%; height: 100%; float:left; border-radius: 30%;
           z-index: 0;}
       .player {background-color: rgba(91, 192, 222, 0.75);}
-      .enemy {background-color: rgba(240, 173, 7891, 192, 222, 0.75);}
+      .enemy {display: inline-block; width: 50%; height: 100%; float:left; border-radius: 30%; background-color: rgba(240, 173, 78, 0.75);}
       .piece {
             display:inline-block;
-            height: 120px;
-            width:120px;
-            line-height: 100px;
-            font-size: 40px;
+            height: 25%;
+            width:25%;
+            font-size:2em;
             float:left;
             border-radius:100%;
             border-style:solid;
-            border-width:10px;
+            border-width:0.25em;
             border-color: rgba(0,0,0,0.9);
             background-color: rgba(255, 255, 255, 0.9);
             color: rgba(0,0,0,0.0);
       }
       
-      .piece:hover  {
+      .player>.piece:hover  {
            content: "\e019";
            color: rgba(0,0,0,0.25);
       }
-      .piece:active > span {
+      .player>.piece:active > span {
            content: "\e019";
            color: rgba(0,0,0,1.0);
           z-index: 1;
            content: "\e019";
-          width: 100px;
-          height: 100px;
-line-height: 80px;
-      border-width: 10px;
-border-radius: 50%;
       border-color: rgba(255, 255, 255,0.9);
       border-style:outset;
-          border-collapse:collapse;
-      margin-top: -50px;
             background-color: rgba(255, 255, 255, 0.9);
       }
-      .piece>span::before {
+      .player>.piece>span::before {
            content: "\e019";
           z-index: 1;
       }
-      .piece>span:active::before {
+      .player>.piece>span:active::before {
            content: "\e019";
            color: rgba(0,0,0,0.9);
           z-index: 1;
       }
-      .piece>span:active {
+      .player>.piece>span:active {
            content: "\e019";
-          width: 100px;
-          height: 100px;
-line-height: 80px;
-      border-width: 10px;
+      border-width: 0.25em;
+          top:0;
+          margin-top: 0;
+          padding-top: 0.0625em;
 border-radius: 50%;
       border-color: rgba(255, 255, 255,0.9);
       border-style:outset;
           border-collapse:collapse;
-      margin-top: -50px;
             background-color: rgba(255, 255, 255, 0.9);
       }
-      .piece>span {
-           content: "\e019";position: relative;
-top: 50%;
-margin-top: -0.5em;
-          line-height: 1em;
-width:64px;
-height:64px;
+      .player>.piece>span {
+content: "\e019";
+position: relative;
+top: 0.25em;
+margin-top: 0.06em;
+width: 100%;
+height: 100%;
 display: inline-block;
 font-family: 'Glyphicons Halflings';
 font-style: normal;
 font-weight: 100;
+font-size:200%;
       }
-      .footer {width: 100%; height:80px;}
+      .footer {width: 100%; height:12.5%;}
       
-      .controls.tinker {position: absolute; left: 80px; top: 150px; z-index: 2; width: 320px; height: 320px; border-radius: 50%; display: inline-block;background-color: rgba(119, 119, 119, 0.9);}
-      .controls.tinker>.top {display:inline-block;position:absolute;left:40px;top:-180px;z-index:3;width: 240px;height: 240px;background-color: rgba(255, 255, 255, 1);border-style:outset;border-radius:50%;border-width:50px;}
-      .controls.tinker>.left {display:inline-block;position:absolute;left:-120px;top:240px;z-index:3;width: 240px;height: 240px;background-color: rgba(255, 255, 255, 1);border-style:outset;border-radius:50%;border-width:50px;}
-      .controls.tinker>.right {display:inline-block;position:absolute;left:200px;top:240px;z-index:3;width: 240px;height: 240px;background-color: rgba(255, 255, 255, 1);border-style:outset;border-radius:50%;border-width:50px;}
-      .controls.tinker>.chosen {left: 0; top:60px; width:100%;height:100%;position:absolute;font-size:240px;}
+      .controls.tinker {position: relative; left: 7.5%; top: 12.5%; z-index: 2; width: 35%; height: 70%; border-radius: 50%; display: block;}
+      .controls.tinker>.top {display:block;position:absolute;left:12.5%;top:-50%;z-index:3;width: 75%;height: 70%;background-color: rgba(245, 245, 245, 1);border-style:outset;border-radius:50%;border-width:50px; border-color: gainsboro;}
+      .controls.tinker a.top>span.glyphicon {width: 100%;
+height: 100%;
+top: 0px;font-size:80px;line-height:1.75em;color:lightslategray;}
+      .controls.tinker>.left {display:block;position:absolute;left:-30%;top:70%;z-index:3;width: 75%;height: 70%;background-color: rgba(255, 255, 255, 1);border-style:outset;border-radius:50%;border-width:50px; border-color:#5cb85c;}
+      .controls.tinker a.left>span.glyphicon {width: 100%;
+height: 100%;
+top: 0px;font-size:80px;line-height:1.75em;color:forestgreen;}
+      .controls.tinker>.left.fire {display:block;position:absolute;left:-30%;top:70%;z-index:3;width: 75%;height: 70%;background-color: rgba(255, 255, 255, 1);border-style:outset;border-radius:50%;border-width:50px; border-color:#d9534f;}
+      .controls.tinker a.left.fire>span.glyphicon {width: 100%;
+height: 100%;
+top: 0px;font-size:80px;line-height:1.75em;color:indianred;}
+      .controls.tinker>.right {display:block;position:absolute;left:60%;top:70%;z-index:3;width: 75%;height: 70%;background-color: white;border-style:outset;border-radius:50%;border-width:50px; border-color: #337ab7;}
+      .controls.tinker a.right>span.glyphicon {width: 100%;
+height: 100%;
+top: 0px;font-size:80px;line-height:1.75em;color:steelblue;}
+      .controls.tinker>.chosen {left: 0; top:60px; width:100%;height:100%;position:absolute;font-size:240px; color:rgba(51, 51, 51, 0.5)}
       
-      .bg-fire {background-color: rgba(217, 83, 79,0.9);}
-      .bg-water {background-color: rgba(51, 122, 183,0.9);}
-      .bg-nature {background-color: rgba(92, 184, 92,0.9);}
+      .bg-fire {background-color: rgba(217, 83, 79,1);}
+      .bg-water {background-color: rgba(51, 122, 183,1);}
+      .bg-nature {background-color: rgba(92, 184, 92,1);}
       .bdr-fire {border-color: rgba(217, 83, 79,0.9);}
       .bdr-water {border-color: rgba(51, 122, 183,0.9);}
       .bdr-nature {border-color: rgba(92, 184, 92,0.9);}
@@ -113,19 +125,15 @@ font-weight: 100;
       .text-nature {color: rgba(92, 184, 92,0.9);}
     </style></head>
   <body>
-    <div class="window" style="display:table;
-width: 100vw;
-height:100vh;
-text-align: center;
-vertical-align: middle;">
-<div class="app" style="
-    
-">
+    <div class="window">
+        <div class="app-centered">
+        <div class="app-wrapper">
+<div class="app">
     <header class="header">
 <div class="label-lg health"></div>    
     </header><div class="mekks" style="
     
-"><div class="mekk player" style=""><div class="controls tinker hidden fade out"><span class="glyphicon glyphicon-cog chosen"></span> <a class="top" style="" href="#tinker/top"></a><a class="left" style="" href="#tinker/left"></a><a class="right" style="" href="#tinker/right"></a></div>
+"><div class="mekk player" style="">
 
 
 <div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
@@ -138,10 +146,7 @@ vertical-align: middle;">
 <div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
 
 
-<div class="piece" style="
-    width: 120px;
-    height: 120px;
-"><span class="glyphicon glyphicon-cog"></span></div>
+<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
 
 <div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
 
@@ -170,12 +175,7 @@ vertical-align: middle;">
 
 <div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div><div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
 
-</div><div class="mekk&nbsp;enemy" style="display: inline-block;
-width: 50%;
-height: 100%;
-float:left;
-border-radius: 30%;
-background-color: rgba(240, 173, 78, 0.75);">
+</div><div class="mekk enemy">
 
 
 <div class="piece"><span class="glyphicon glyphicon-cog" style="
@@ -217,11 +217,13 @@ background-color: rgba(240, 173, 78, 0.75);">
 
 
 <div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div><div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-</div></div><footer class="footer" style="">
-</footer></div>
 </div>
-
+<div class="controls tinker hidden fade out bg-fire"><span class="glyphicon glyphicon-fire chosen"></span> <a class="top" style="" href="#tinker/top"><span class="glyphicon glyphicon-move" style=""></span></a><a class="left" style="" href="#tinker/left"><span class="glyphicon glyphicon-leaf" style=""></span></a><a class="right" style="" href="#tinker/right"><span class="glyphicon glyphicon-tint" style=""></span></a></div>
+    </div>
+<footer class="footer" style="">
+</footer>
+        </div>
+</div></div>
 <section id="code-footer">
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
