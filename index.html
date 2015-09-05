@@ -24,206 +24,33 @@
       .app-centered {display: table-cell; width: 100%; height: 100%;  vertical-align: middle;}
       .app-wrapper {display: block; width: 100%;height:100%;text-align: center;min-height: 640px; max-height:640px;}
       .app {display: block; width: 100%; height:100%; margin: auto; min-width: 960px; max-width: 960px;}
-      .header {width: 100%; height:12.5%;}
-      .label-lg {}
-      .health {}
-      .mekks{height:75%;width:100%; font-size:16px;}
-      .mekk{display: inline-block; width: 50%; height: 100%; float:left; border-radius: 30%;
-          z-index: 0;}
-      .player {background-color: rgba(91, 192, 222, 0.75);}
-      .enemy {display: inline-block; width: 50%; height: 100%; float:left; border-radius: 30%; background-color: rgba(240, 173, 78, 0.75);}
-      .piece {
-            display:inline-block;
-            height: 25%;
-            width:25%;
-            font-size:2em;
-            float:left;
-            border-radius:100%;
-            border-style:solid;
-            border-width:0.25em;
-            border-color: rgba(0,0,0,0.9);
-            background-color: rgba(255, 255, 255, 0.9);
-            color: rgba(0,0,0,0.0);
-      }
-      
-      .player>.piece:hover  {
-           content: "\e019";
-           color: rgba(0,0,0,0.25);
-      }
-      .player>.piece:active > span {
-           content: "\e019";
-           color: rgba(0,0,0,1.0);
-          z-index: 1;
-           content: "\e019";
-      border-color: rgba(255, 255, 255,0.9);
-      border-style:outset;
-            background-color: rgba(255, 255, 255, 0.9);
-      }
-      .player>.piece>span::before {
-           content: "\e019";
-          z-index: 1;
-      }
-      .player>.piece>span:active::before {
-           content: "\e019";
-           color: rgba(0,0,0,0.9);
-          z-index: 1;
-      }
-      .player>.piece>span:active {
-           content: "\e019";
-      border-width: 0.25em;
-          top:0;
-          margin-top: 0;
-          padding-top: 0.0625em;
-border-radius: 50%;
-      border-color: rgba(255, 255, 255,0.9);
-      border-style:outset;
-          border-collapse:collapse;
-            background-color: rgba(255, 255, 255, 0.9);
-      }
-      .player>.piece>span {
-content: "\e019";
-position: relative;
-top: 0.25em;
-margin-top: 0.06em;
-width: 100%;
-height: 100%;
-display: inline-block;
-font-family: 'Glyphicons Halflings';
-font-style: normal;
-font-weight: 100;
-font-size:200%;
-      }
-      .footer {width: 100%; height:12.5%;}
-      
-      .controls.tinker {position: relative; left: 7.5%; top: 12.5%; z-index: 2; width: 35%; height: 70%; border-radius: 50%; display: block;}
-      .controls.tinker>.top {display:block;position:absolute;left:12.5%;top:-50%;z-index:3;width: 75%;height: 70%;background-color: rgba(245, 245, 245, 1);border-style:outset;border-radius:50%;border-width:50px; border-color: gainsboro;}
-      .controls.tinker a.top>span.glyphicon {width: 100%;
-height: 100%;
-top: 0px;font-size:80px;line-height:1.75em;color:lightslategray;}
-      .controls.tinker>.left {display:block;position:absolute;left:-30%;top:70%;z-index:3;width: 75%;height: 70%;background-color: rgba(255, 255, 255, 1);border-style:outset;border-radius:50%;border-width:50px; border-color:#5cb85c;}
-      .controls.tinker a.left>span.glyphicon {width: 100%;
-height: 100%;
-top: 0px;font-size:80px;line-height:1.75em;color:forestgreen;}
-      .controls.tinker>.left.fire {display:block;position:absolute;left:-30%;top:70%;z-index:3;width: 75%;height: 70%;background-color: rgba(255, 255, 255, 1);border-style:outset;border-radius:50%;border-width:50px; border-color:#d9534f;}
-      .controls.tinker a.left.fire>span.glyphicon {width: 100%;
-height: 100%;
-top: 0px;font-size:80px;line-height:1.75em;color:indianred;}
-      .controls.tinker>.right {display:block;position:absolute;left:60%;top:70%;z-index:3;width: 75%;height: 70%;background-color: white;border-style:outset;border-radius:50%;border-width:50px; border-color: #337ab7;}
-      .controls.tinker a.right>span.glyphicon {width: 100%;
-height: 100%;
-top: 0px;font-size:80px;line-height:1.75em;color:steelblue;}
-      .controls.tinker>.chosen {left: 0; top:60px; width:100%;height:100%;position:absolute;font-size:240px; color:rgba(51, 51, 51, 0.5)}
-      
-      .bg-fire {background-color: rgba(217, 83, 79,1);}
-      .bg-water {background-color: rgba(51, 122, 183,1);}
-      .bg-nature {background-color: rgba(92, 184, 92,1);}
-      .bdr-fire {border-color: rgba(217, 83, 79,0.9);}
-      .bdr-water {border-color: rgba(51, 122, 183,0.9);}
-      .bdr-nature {border-color: rgba(92, 184, 92,0.9);}
-      .text-fire {color: rgba(217, 83, 79,0.9);}
-      .text-water {color: rgba(51, 122, 183,0.9);}
-      .text-nature {color: rgba(92, 184, 92,0.9);}
     </style></head>
   <body>
     <div class="window">
         <div class="app-centered">
         <div class="app-wrapper">
-<div class="app">
-    <header class="header">
-<div class="label-lg health"></div>    
-    </header><div class="mekks" style="
-    
-"><div class="mekk player" style="">
-
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-
-
-
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div><div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div><div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-
-
-
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div><div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div><div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-</div><div class="mekk enemy">
-
-
-<div class="piece"><span class="glyphicon glyphicon-cog" style="
-"></span></div>
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-
-
-
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div><div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div><div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-
-
-
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div><div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
-
-
-
-<div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div><div class="piece" style=""><span class="glyphicon glyphicon-cog"></span></div>
+<div class="container app">
+<div class="row"><div class="col-xs-2"><a class="btn btn-default btn-lg btn-block disabled"><span class="label label-info">ENERGY:</span></a></div>
+<div class="col-xs-4 btn-group">
+<a class="btn btn-info btn-lg">Z</a>
+<a class="btn btn-info btn-lg">Z</a>
+<a class="btn btn-info btn-lg">Z</a>
+<a class="btn btn-info btn-lg">Z</a></div><div class="col-xs-6"><a class="btn btn-default btn-lg btn-block disabled"><span class="label label-default">ATTACKS</span></a></div></dov>
+<div class="row"><div class="col-xs-6"><a class="btn btn-warning btn-lg btn-block">RANDOMIZED</a></div><div class="col-xs-6"><a class="btn btn-danger btn-lg btn-block">FIRE</a></div></div>
+<div class="row"><div class="col-xs-6"><a class="btn btn-warning btn-lg btn-block">TINKER</a></div><div class="col-xs-6"><a class="btn btn-primary btn-lg btn-block">WATER</a></div></div>
+<div class="row">
+<div class="col-xs-6"><a class="btn btn-warning btn-lg btn-block">CHOOSE ALL</a></div>
+<div class="col-xs-6"><a class="btn btn-success btn-lg btn-block">ATTACKS</a></div></div>
+<div class="row"><div class="col-xs-6"><a class="btn btn-link btn-lg btn-block"><span class="text-danger">FIRE</span></a></div><div class="col-xs-6"><a class="btn btn-link btn-lg btn-block"><span class="text-danger">FIRE</span></a></div></div>
+<div class="row"><div class="col-xs-6"><a class="btn btn-link btn-lg btn-block"><span class="text-danger">##</span></a></div><div class="col-xs-6"><a class="btn btn-link btn-lg btn-block"><span class="text-danger">##</span></a></div></div>
+<div class="row"><div class="col-xs-6"><a class="btn btn-link btn-lg btn-block"><span class="text-primary">WATER</span></a></div><div class="col-xs-6"><a class="btn btn-link btn-lg btn-block"><span class="text-primary">WATER</span></a></div></div>
+<div class="row"><div class="col-xs-6"><a class="btn btn-link btn-lg btn-block"><span class="text-primary">##</span></a></div><div class="col-xs-6"><a class="btn btn-link btn-lg btn-block"><span class="text-primary">##</span></a></div></div>
+<div class="row"><div class="col-xs-6"><a class="btn btn-link btn-lg btn-block"><span class="text-success">NATURE</span></a></div><div class="col-xs-6"><a class="btn btn-link btn-lg btn-block"><span class="text-success">NATURE</span></a></div></div>
+<div class="row"><div class="col-xs-6"><a class="btn btn-link btn-lg btn-block"><span class="text-success">##</span></a></div><div class="col-xs-6"><a class="btn btn-link btn-lg btn-block"><span class="text-success">##</span></a></div></div>
 </div>
-<div class="controls tinker hidden fade out bg-fire"><span class="glyphicon glyphicon-fire chosen"></span> <a class="top" style="" href="#tinker/top"><span class="glyphicon glyphicon-move" style=""></span></a><a class="left" style="" href="#tinker/left"><span class="glyphicon glyphicon-leaf" style=""></span></a><a class="right" style="" href="#tinker/right"><span class="glyphicon glyphicon-tint" style=""></span></a></div>
-    </div>
-<footer class="footer" style="">
-</footer>
+</div>
         </div>
-</div></div>
+</div>
 <section id="code-footer">
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
