@@ -1,16 +1,16 @@
-@media only screen (max-width: 414px) and (orientation:portrait) {
+@media screen (max-width: 414px) and (orientation:portrait) {
 /* iPhone portrait */
 }
 
-@media only screen (min-width: 480px) and (max-width: @screen-xs-max) and (orientation:landscape) {
+@media screen (min-width: 480px) and (max-width: @screen-xs-max) and (orientation:landscape) {
 /* iPhone landscape */
 }
 
-@media only screen and (min-width: @screen-sm-min) and (max-width: @screen-sm-max) and (orientation:portrait) {
+@media screen and (min-width: @screen-sm-min) and (max-width: @screen-sm-max) and (orientation:portrait) {
 /* iPad portrait */
 }
 
-@media only screen and (min-height: @screen-sm-min) and (max-height: @screen-sm-max) and (orientation:landscape) {
+@media screen and (min-height: @screen-sm-min) and (max-height: @screen-sm-max) and (orientation:landscape) {
 /* iPad landscape */
 }
 
