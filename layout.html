@@ -15,6 +15,7 @@
       html
       {
         font-size:100%;
+        min-height:1em;
       }
 
       body
@@ -54,11 +55,24 @@
       {
         float: left;
         background: gray;
+        height:100%;
       }
 
       .labelcell
       {
-        text-align: center;
+          text-align: center;
+          line-height: 1em;
+          height: 100%;
+          width: 100%;
+          display: table;
+      }
+
+      .labelcell * {display: table-cell; vertical-align: middle; }
+
+
+      .attackbuttongroup
+      {
+        height:100%;
       }
 
       .attackbutton
@@ -69,12 +83,17 @@
         float:left;
       }
 
+      .bottombar
+      {
+        bottom:0;
+      }
+
       @media (orientation:portrait) {
       /* iPhone portrait */
 
         .hidden-xs-portrait
         {
-          display:none;
+          display: none;
         }
 
         .mekkcell
@@ -82,10 +101,6 @@
           width: 50%;
         }
 
-        .labelcell
-        {
-          line-height: 20vh;
-        }
 
         .topbar
         {
@@ -104,18 +119,13 @@
 
           .hidden-xs-landscape
           {
-            display:none;
+            display: none;
           }
 
           .viewcell
           {
             height: 25%;
             width: 100%;
-          }
-
-          .labelcell
-          {
-            line-height: 25vh;
           }
 
           .mekkcell
@@ -188,7 +198,7 @@
 
           </div>
 
-          <div class="enemy hidden-xs-portrait">
+          <div class="hidden-xs-portrait enemy">
 
               <div class="mekkcell">
                   <div class="labelcell">
@@ -226,7 +236,7 @@
 
           </div>
 
-          <div class="enemy hidden-xs-portrait">
+          <div class="hidden-xs-portrait enemy">
 
               <div class="mekkcell">
                   <div class="labelcell">
@@ -246,35 +256,32 @@
 
       <div class="viewcell bottombar">
 
-          <div class="labelcell hidden-xs-landscape">
-              <span>choose a piece to change the element</span>
+          <div class="hidden-xs-landscape labelcell">
+              <span class="hidden-xs-landscape">choose a piece to change the element</span>
           </div>
 
-          <div class="attackbuttongroup hidden-xs-portrait">
+          <div class="hidden-xs-portrait attackbuttongroup">
 
-              <div class="attackbutton">
-                  <div class="labelcell">
+              <div class="attackbutton labelcell">
                       <a href="#fire">fire</a>
-                  </div>
               </div>
 
-              <div class="attackbutton">
-                  <div class="labelcell">
+              <div class="attackbutton labelcell">
                       <a href="#aqua">aqua</a>
-                  </div>
+
               </div>
 
-              <div class="attackbutton">
-                  <div class="labelcell">
+              <div class="attackbutton labelcell">
                       <a href="#leaf">leaf</a>
-                  </div>
+
               </div>
+
+            </div>
 
           </div>
 
       </div>
 
-    </div>
 
   </body>
 
