@@ -75,7 +75,14 @@ resetMessage();
 
     function resetMessage() {
 document.getElementsByClassName('message')[0].innerHTML = 'choose a piece to change its element';
-console.log('message reset');
+console.log('message reset, resetting buttons');
+      document.getElementsByClassName('left')[0].disabled=true;
+      document.getElementsByClassName('left')[0].innerHTML = '';
+      document.getElementsByClassName('left')[0].dataset.element = '';
+      document.getElementsByClassName('right')[0].disabled=true;
+      document.getElementsByClassName('right')[0].innerHTML = '';
+      document.getElementsByClassName('right')[0].dataset.element = '';
+    
 }
 
 function updateMessage(message) {
