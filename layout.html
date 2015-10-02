@@ -4,8 +4,8 @@
   <head>
 
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width" />
 
     <title>Mekks: Mekkanic Duels</title>
     <meta name="author" content="Patrick Blaine">
@@ -15,29 +15,25 @@
       html
       {
         font-size:100%;
-        min-height:1em;
       }
 
       body
       {
+        font-size:20px;
+        min-height:1em;
         margin:0;
         border:0;
         padding:0;
-      }
-
-      .hidden-xs-portrait
-      {
-        display: block;
-      }
-      .hidden-xs-landscape
-      {
-        display: block;
+        -webkit-text-size-adjust:100%;
       }
 
       #container
       {
-        height: 100vh;
-        background: black;
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
       }
 
       .labelcell
@@ -50,7 +46,7 @@
       }
 
       .labelcell * {display: table-cell; vertical-align: middle;
-      word-break: break-all; }
+      word-break: break-word; }
 
       .viewcell
       {
@@ -101,6 +97,13 @@
         {
           width: 100%;
         }
+        
+        
+      .bottombar a
+      {
+        width:20%;
+        height:100%;
+      }
 
         .hidden-xs-portrait
         {
@@ -132,6 +135,18 @@
           {
             width: 50%;
             height: 50%;
+          }
+          
+          .bottombar a
+          {
+            width:20%;
+            height:100%;
+          }
+          
+          #container
+          {
+            position:fixed;
+            max-height: calc(100vh);
           }
 
           .hidden-xs-landscape
@@ -191,8 +206,7 @@
 
 
       </div><div class="hidden-xs-portrait viewcell mekk enemy">
-        <div class="mekkcell labelcell">
-
+              <div class="mekkcell labelcell">
                       <span>enemy.1</span>
               </div><div class="mekkcell labelcell">
 
@@ -220,22 +234,15 @@
 
 
 
-<div class="viewcell bottombar labelcell">
+      <div class="viewcell bottombar labelcell">
 
               <div></div>
               <a class="attack fire hidden-xs-portrait" href="#attack/fire">fire</a>
-              <a class="left leaf hidden" href="#tinker/leaf">leaf</a>
-              <a class="left aqua hidden" href="#tinker/aqua">aqua</a>
-              <a class="left fire hidden" href="#tinker/fire">fire</a>
 
               <div></div>
               <a class="attack leaf hidden-xs-portrait" href="#attack/leaf">leaf</a>
               <span class="message hidden-xs-landscape">choose a piece to change its element</span>
               <div></div>
-
-              <a class="right fire hidden" href="#tinker/fire">fire</a>
-              <a class="right leaf hidden" href="#tinker/leaf">leaf</a>
-              <a class="right aqua hidden" href="#tinker/aqua">aqua</a>
               <a class="attack right aqua hidden-xs-portrait" href="#attack/aqua">aqua</a>
               <div></div>
 
