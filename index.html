@@ -14,16 +14,34 @@
 
     function removeAllActives() {var numberOfActive = document.getElementsByClassName('active').length; for (var i=0; i < numberOfActive; i++){removeClass('active',document.getElementsByClassName('active')[i])}}
 
-    function addClassToParent(targetClassName,context) {removeAllActives();context.parentNode.className += ' '+targetClassName; console.log(parseInt(context.parentNode.getElementsByClassName('tinker')[0].innerHTML)+' clicked')}
+    function addClassToParent(targetClassName,context) {removeAllActives();context.parentNode.className += ' '+targetClassName; 
+var message = parseInt(context.parentNode.getElementsByClassName('tinker')[0].innerHTML);
+updateMessage(message);
+console.log(parseInt(context.parentNode.getElementsByClassName('tinker')[0].innerHTML)+' clicked')
+}
 
     function removeClassFromParent(targetClassName,context) {
       var classList = context.parentNode.classList; var className = ''; for (var i = 0; i < classList.length; i++) {if (classList[i] != targetClassName) {className += classList[i]+' '}}; context.parentNode.className = className;console.log(context.parentNode.getElementsByClassName('tinker')[0].innerHTML +' cancelled');
+function resetMessage() {
+document.getElementsByClassName('message')[0].innerHTML('choose a piece to change its element');
+console.log('message reset');
+}
     }
 
     function removeClass(targetClassName,context) {
       var classList = context.classList; var className = ''; for (var i = 0; i < classList.length; i++) {if (classList[i] != targetClassName) {className += classList[i]+' '}}; context.className = className; console.log(context.parentNode.getElementsByClassName('tinker')[0].innerHTML +' cancelled');
+resetMessage();
     }
 
+    function resetMessage() {
+document.getElementsByClassName('message')[0].innerHTML = 'choose a piece to change its element';
+console.log('message reset');
+}
+
+function updateMessage(message) {
+document.getElementsByClassName('message')[0].innerHTML = message;
+console.log('message changed to: '+message);
+}
     </script>
 
     <style>
@@ -308,6 +326,7 @@
 
 <div class="viewcell bottombar labelcell">
 
+<span class="hidden-xs-portrait incoming player">player</span>
               <div></div>
               <a class="attack fire hidden-xs-portrait" href="#attack/fire">fire</a>
 
@@ -317,7 +336,7 @@
               <div></div>
               <a class="attack right aqua hidden-xs-portrait" href="#attack/aqua">aqua</a>
               <div></div>
-
+<span class="hidden-xs-portrait incoming enemy">enemy</span>
           </div>
 
         </div>
