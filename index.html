@@ -181,12 +181,18 @@ console.log('message changed to: '+message);
       
       .left
       {
-        border-radius:100%;
+        border-top-right-radius:100%;
+        border-bottom-right-radius:100%;
+        border-top-left-radius:0;
+        border-bottom-left-radius:0;
       }
       
       .right
       {
-        border-radius:100%;
+        border-top-right-radius:0;
+        border-bottom-right-radius:0;
+        border-top-left-radius:100%;
+        border-bottom-left-radius:100%;
       }
     
     [data-element="fire"]
