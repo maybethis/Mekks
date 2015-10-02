@@ -17,7 +17,7 @@
     function addClassToParent(targetClassName,context) {removeAllActives();context.parentNode.className += ' '+targetClassName; 
 var message = context.parentNode.dataset.element;
 updateMessage(message);
-console.log(parseInt(context.parentNode.getElementsByClassName('tinker')[0].innerHTML)+' clicked')
+console.log(parseInt(context.parentNode.getElementsByClassName('tinker')[0].innerHTML)+' clicked, element: '+content.parentNode.dataset.element)l
 }
 
     function removeClassFromParent(targetClassName,context) {
@@ -246,17 +246,17 @@ console.log('message changed to: '+message);
     
     [data-element="fire"]
     {
-      color=red;
+      color:red;
     }
     
     [data-element="leaf"]
     {
-      color=green;
+      color:green;
     }
     
     [data-element="aqua"]
     {
-      color=blue;
+      color:blue;
     }
 
     </style>
@@ -280,20 +280,23 @@ console.log('message changed to: '+message);
       </div>
 
       <div style="" class="viewcell mekk player">
-        <div class="mekkcell labelcell" data-element="leaf">
-                      <a href="#1" class="hidden-xs-landscape tinker" onclick="addClassToParent('active',this);this.parentNode.dataset.element='fire';">1</a>
+        <div class="mekkcell labelcell" data-element="fire">
+                      <a href="#1" class="hidden-xs-landscape tinker" onclick="addClassToParent('active',this);">1</a>
                       <a href="#cancel" class="hidden-xs-landscape cancel " onclick="removeClassFromParent('active',this)">X</a>
                       <span class="hidden-xs-portrait">1</span>
-              </div><div class="mekkcell labelcell" data-element="leaf">
-                      <a href="#2" class="hidden-xs-landscape tinker" onclick="addClassToParent('active',this);this.parentNode.dataset.element='fire';">2</a>
+              </div>
+              <div class="mekkcell labelcell" data-element="leaf">
+                      <a href="#2" class="hidden-xs-landscape tinker" onclick="addClassToParent('active',this);">2</a>
                       <a href="#cancel" class="hidden-xs-landscape cancel " onclick="removeClassFromParent('active',this)">X</a>
                       <span class="hidden-xs-portrait">2</span>
-                  </div><div class="mekkcell labelcell" data-element="leaf">
-                      <a href="#3" class="hidden-xs-landscape tinker" onclick="addClassToParent('active',this);this.parentNode.dataset.element='fire';">3</a>
+                  </div>
+                  <div class="mekkcell labelcell" data-element="aqua">
+                      <a href="#3" class="hidden-xs-landscape tinker" onclick="addClassToParent('active',this);">3</a>
                       <a href="#cancel" class="hidden-xs-landscape cancel" onclick="removeClassFromParent('active',this)">X</a>
                       <span class="hidden-xs-portrait">3</span>
-                  </div><div class="mekkcell labelcell" data-element="leaf">
-                      <a href="#4" class="hidden-xs-landscape tinker" onclick="addClassToParent('active',this);this.parentNode.dataset.element='fire';">4</a>
+                  </div>
+                  <div class="mekkcell labelcell" data-element="leaf">
+                      <a href="#4" class="hidden-xs-landscape tinker" onclick="addClassToParent('active',this);">4</a>
                       <a href="#cancel" class="hidden-xs-landscape cancel " onclick="removeClassFromParent('active',this)">X</a>
                       <span class="hidden-xs-portrait">4</span>
                   </div>
