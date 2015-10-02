@@ -14,6 +14,46 @@
 
     function removeAllActives() {var numberOfActive = document.getElementsByClassName('active').length; for (var i=0; i < numberOfActive; i++){removeClass('active',document.getElementsByClassName('active')[i])}}
 
+    function updateActiveToElement(elementName) {document.getElementsByClassName('active')[0].dataset.element=elementName; removeAllActives(); resetMessage()}
+
+    function getWeakForElement(elementName)
+    {
+      switch(elementName)
+      {
+        case "fire":
+          return "aqua";
+        case "aqua":
+          return "leaf";
+        case "leaf":
+          return "fire";
+        default:
+          return "";
+      }
+    }
+    
+    function getStrongForElement(elementName)
+    {
+      switch(elementName)
+      {
+        case "fire":
+          return "leaf";
+        case "aqua":
+          return "fire";
+        case "leaf":
+          return "aqua";
+        default:
+          return "";
+      }
+    }
+    
+    function tinkerForElement(elementName)
+    {
+      document.querySelector('.bottombar .left').innerHTML(getWeakForElement(elementName));
+      document.querySelector('.bottombar .right').innerHTML(getStrongForElement(elementName));
+    }
+    
+    change
+
     function addClassToParent(targetClassName,context) {removeAllActives();context.parentNode.className += ' '+targetClassName; 
 var message = context.parentNode.dataset.element;
 updateMessage(message);
@@ -345,13 +385,13 @@ console.log('message changed to: '+message);
 <span class="hidden-xs-portrait incoming player">player</span>
               <div></div>
               <a class="attack fire hidden-xs-portrait" href="#attack/fire" data-element="fire">fire</a>
-              <a class="hidden-xs-landscape left" data-element=""></a>
+              <a class="hidden-xs-landscape left" onclick="updateActiveToElement(this.dataset.element);"></a>
               <div></div>
               <a class="attack leaf hidden-xs-portrait" href="#attack/leaf" data-element="leaf">leaf</a>
               <span class="message hidden-xs-landscape">choose a piece to change its element</span>
               <div></div>
               <a class="attack right aqua hidden-xs-portrait" href="#attack/aqua" data-element="aqua">aqua</a>
-              <a class="hidden-xs-landscape right" data-element=""></a>
+              <a class="hidden-xs-landscape right" onclick="updateActiveToElement(this.dataset.element);"></a>
               <div></div>
 <span class="hidden-xs-portrait incoming enemy">enemy</span>
           </div>
