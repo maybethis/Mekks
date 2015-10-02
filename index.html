@@ -17,7 +17,7 @@
     function addClassToParent(targetClassName,context) {removeAllActives();context.parentNode.className += ' '+targetClassName; 
 var message = context.parentNode.dataset.element;
 updateMessage(message);
-console.log(parseInt(context.parentNode.getElementsByClassName('tinker')[0].innerHTML)+' clicked, element: '+content.parentNode.dataset.element);
+console.log(parseInt(context.parentNode.getElementsByClassName('tinker')[0].innerHTML)+' clicked, element: '+context.parentNode.dataset.element);
 }
 
     function removeClassFromParent(targetClassName,context) {
