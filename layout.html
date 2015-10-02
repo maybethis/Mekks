@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>Mekks: Mekkanic Duels</title>
+    <meta name="author" content="Patrick Blaine">
+
+    <style>
+
+      html
+      {
+        font-size:100%;
+      }
+
+      body
+      {
+        margin:0;
+        border:0;
+        padding:0;
+      }
+
+      #container
+      {
+        height: 100vh;
+        background: black;
+      }
+
+      .viewcell
+      {
+        height: 20%;
+        background: white;
+        width:100%;
+        float:left;
+      }
+
+      .player
+      {
+        height: 100%;
+        float: left;
+      }
+
+      .enemy
+      {
+        height: 100%;
+        float: left;
+      }
+
+      .mekkcell
+      {
+        float: left;
+        background: gray;
+      }
+
+      .labelcell
+      {
+        text-align: center;
+      }
+
+      .attackbutton
+      {
+        width: 20%;
+        margin-left:6.66%;
+        margin-right:6.67%;
+        float:left;
+      }
+
+      @media (orientation:portrait) {
+      /* iPhone portrait */
+
+        .hidden-xs-portrait
+        {
+          display:none;
+        }
+
+        .mekkcell
+        {
+          width: 50%;
+        }
+
+        .labelcell
+        {
+          line-height: 20vh;
+        }
+
+        .topbar
+        {
+          width: 100%;
+        }
+
+        .player
+        {
+          width: 100%;
+        }
+
+      }
+
+      @media (orientation:landscape) {
+      /* iPhone landscape */
+
+          .hidden-xs-landscape
+          {
+            display:none;
+          }
+
+          .viewcell
+          {
+            height: 25%;
+            width: 100%;
+          }
+
+          .labelcell
+          {
+            line-height: 25vh;
+          }
+
+          .mekkcell
+          {
+            width: 50%;
+          }
+
+          .topbar
+          {
+            width: 50%;
+          }
+
+          .player
+          {
+            width:50%;
+          }
+
+          .enemy
+          {
+            width:50%;
+          }
+
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div id="container">
+
+      <div class="viewcell topbar">
+
+          <div class="labelcell">
+
+              <span>health</span>
+
+          </div>
+
+      </div>
+
+      <div class="viewcell topbar">
+
+          <div class="labelcell">
+
+              <span>energy</span>
+
+          </div>
+
+      </div>
+
+      <div class="viewcell">
+
+          <div class="player">
+
+              <div class="mekkcell">
+                  <div class="labelcell">
+                      <a href="#1" class="hidden-xs-landscape">1</a>
+                      <span class="hidden-xs-portrait">player.1</span>
+                  </div>
+              </div>
+
+              <div class="mekkcell">
+                  <div class="labelcell">
+                      <a href="#2" class="hidden-xs-landscape">2</a>
+                      <span class="hidden-xs-portrait">player.2</span>
+                  </div>
+              </div>
+
+          </div>
+
+          <div class="enemy hidden-xs-portrait">
+
+              <div class="mekkcell">
+                  <div class="labelcell">
+                      <span>enemy.1</span>
+                  </div>
+              </div>
+
+              <div class="mekkcell">
+                  <div class="labelcell">
+                      <span>enemy.2</span>
+                  </div>
+              </div>
+
+          </div>
+
+      </div>
+
+      <div class="viewcell">
+
+          <div class="player">
+
+          <div class="mekkcell">
+          <div class="labelcell">
+          <a href="#3" class="hidden-xs-landscape">3</a>
+          <span class="hidden-xs-portrait">player.3</span>
+          </div>
+
+          </div>
+          <div class="mekkcell">
+          <div class="labelcell">
+          <a href="#4" class="hidden-xs-landscape">4</a>
+          <span class="hidden-xs-portrait">player.4</span>
+          </div>
+          </div>
+
+          </div>
+
+          <div class="enemy hidden-xs-portrait">
+
+              <div class="mekkcell">
+                  <div class="labelcell">
+                      <span>enemy.3</span>
+                  </div>
+              </div>
+
+              <div class="mekkcell">
+                  <div class="labelcell">
+                      <span>enemy.4</span>
+                  </div>
+              </div>
+
+          </div>
+
+      </div>
+
+      <div class="viewcell bottombar">
+
+          <div class="labelcell hidden-xs-landscape">
+              <span>choose a piece to change the element</span>
+          </div>
+
+          <div class="attackbuttongroup hidden-xs-portrait">
+
+              <div class="attackbutton">
+                  <div class="labelcell">
+                      <a href="#fire">fire</a>
+                  </div>
+              </div>
+
+              <div class="attackbutton">
+                  <div class="labelcell">
+                      <a href="#aqua">aqua</a>
+                  </div>
+              </div>
+
+              <div class="attackbutton">
+                  <div class="labelcell">
+                      <a href="#leaf">leaf</a>
+                  </div>
+              </div>
+
+          </div>
+
+      </div>
+
+    </div>
+
+  </body>
+
+</html>
