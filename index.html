@@ -57,7 +57,7 @@ if (aquaCount == 0) {aquaButton.disabled = "disabled";aquaButton.onclick = ""; a
 
    var leafCount = getElementCountFor('leaf'); 
 var leafButton = document.getElementsByClassName('attack leaf')[0];
-if (leafCount == 0) {leafButton.disabled = "disabled";leafButton.style.opacity = "0.5";leafButton.onclick=""} else {leafButton.disabled = ""; leafButton.style.opacity = "1; leafButton.onclick=function(){elementButtonClicked('leaf')};}
+if (leafCount == 0) {leafButton.disabled = "disabled";leafButton.style.opacity = "0.5";leafButton.onclick=""} else {leafButton.disabled = ""; leafButton.style.opacity = "1"; leafButton.onclick=function(){elementButtonClicked('leaf')};}
 }
     
     function tinkerForElement(elementName)
