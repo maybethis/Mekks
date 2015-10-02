@@ -23,9 +23,6 @@ console.log(parseInt(context.parentNode.getElementsByClassName('tinker')[0].inne
     function removeClassFromParent(targetClassName,context) {
       var classList = context.parentNode.classList; var className = ''; for (var i = 0; i < classList.length; i++) {if (classList[i] != targetClassName) {className += classList[i]+' '}}; context.parentNode.className = className;console.log(context.parentNode.getElementsByClassName('tinker')[0].innerHTML +' cancelled');
 resetMessage();
-document.getElementsByClassName('message')[0].innerHTML('choose a piece to change its element');
-console.log('message reset');
-}
     }
 
     function removeClass(targetClassName,context) {
