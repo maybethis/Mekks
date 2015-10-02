@@ -1,47 +1,11 @@
-HEAD > META TAGS
-{
-Title:
-"Mekks: Mekanic Duels";
-
-Author:
-"Patrick Blaine";
+"Mekks: Mekanic Duels" by Patrick Blaine
 
 Description:
-"Mekks: Mekanic Duels is a real-time battle against the opponent's manufactured elemental avatar with your own.  Use your ever-recharging, though always limited energy to unleash your elemental attacks on your opponent; exploiting their its weaknesses and the its strengths as your defense against theirs.  At any time, and drawing from the same energy pool as before, you can change your elemental makeup instead of attacking, constantly redefining your offensive and defensive power, always chasing the optimum crafting of Mekk for the moment."
-}
+“Mekks: Mekanic Duels is a real-time battle against the opponent's manufactured elemental avatar with your own.  Use your ever-recharging, though always limited energy to unleash your elemental attacks on your opponent; exploiting their its weaknesses and the its strengths as your defense against theirs.  At any time, and drawing from the same energy pool as before, you can change your elemental makeup instead of attacking, constantly redefining your offensive and defensive power, always chasing the optimum crafting of Mekk for the moment.”
 
-DEV > "Game Logic"
+
+Game Logic:
 {
 'Attacking/Defending' : "Every attack takes a requisite quantity of energy and the damage is multiplied by the number of your pieces sharing your attack's element.  If your energy reserves are two low or you have none of your attack's element set out, the ability to execute that element's attack will be disabled until both your energy has the recharged the requisite amount for an attack and that there is at least one piece of the element you intend to attack with in your Mekk's composition.  Your attack comes from the total of your Mekk that has the element you intend to attack with, and against every individual piece of your enemy's Mekk, see if your damage is negated, taken, or doubly taken due to your attacking element's strengths and weaknesses to the other elements.  The formula for an attack is to choose one of the three elements and then: Take the total number of that element's pieces' in your Mekk, minus the number of your enemy's pieces that are strong against your element, plus the number of their pieces that are weak against your attack's element.  Attacking takes a quick bit of time to charge up before its executed, during which time the composition of your Mekk cannot be changed, though you can initiate additional attacks.  Your enemy can also see impending attack's targeted element and strength during the pre-executing charge period, allowing for just a momentary chance to change your makeup in order to lessen the blow.",
 'Changing An Element': "As long as you have the requisite amount of energy and are not in the process of executing an attack, you can use your energy to change a piece's element to another."
-}
-
-DEV > "12 Column Names"
-{
-'At-A-Glance':{'NAMED:':'btn-link', 'BLOOD:':'progress', 'POWER:':'progress', 'FLAME:':'btn-danger', 'HYDRO:':'btn-primary', 'PLANT:':'btn-success'},
-'Tinkering':"[FLAME?](CHANGE),[_100%_](BLOOD:),[_100%_](POWER:),[CANCEL](CANCEL),[HYDRO?](SELECT),[PLANT?](SELECT)"
-}
-
-DEV > "Responsive Layouts Always Keep Strategic Data Visible"
-{
-'Phone': "All info and action for both Mekks can be seen at all times gridded items are presented vertically stacked, with collapsed details, and screen-wide instead of piece by piece with varying width columns.  Each Mekk reports its: Player's Name, Health (Progress Bar),Energy (Progress Bar)", and its Elemental Totals (each with its numbered total labeled and its Action for the context); All text can be shown in 6 column forms, each column has a letter with a z of 1 and opacity of at most 0.5 while the label text is centered doesn't obay the block spacing."
-'Phone-LandScape':"At-A-Glance Display Of Mekks Side By Side.",
-'Tablet': "We show a pair of grids instead a text-readout and a header of progress bars & footer"
-"Progress-Bars":The Health Progress Bar Is Just A Big Orange Bar That Goes Down In Percents Directly Proportional To Damage Done.  The Energy Bar restores 5% every 2 seconds, but doesn't start restoring until after you've attacked.  While it is not increasing animation isn't active."
-}
-
-
-CSS > Psuedocode for each Media
-{
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
-
-/* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) { ... }
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) { ... }
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) { ... }
 }
