@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width" />
+
+    <title>Mekks: Mekkanic Duels</title>
+    <meta name="author" content="Patrick Blaine">
+
+    <style>
+
+      html
+      {
+        font-size:100%;
+      }
+
+      body
+      {
+        font-size:20px;
+        min-height:1em;
+        margin:0;
+        border:0;
+        padding:0;
+        -webkit-text-size-adjust:100%;
+      }
+
+      #container
+      {
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+      }
+
+      .labelcell
+      {
+          text-align: center;
+          line-height: 1em;
+          height: 100%;
+          width: 100%;
+          display: table;
+      }
+
+      .labelcell * {display: table-cell; vertical-align: middle;
+      word-break: break-word; }
+
+      .viewcell
+      {
+        height: 20%;
+        background: white;
+        width:100%;
+        float:left;
+      }
+
+      .mekk
+      {
+        height:40%;
+      }
+
+      .mekkcell
+      {
+        float: left;
+        background: gray;
+        height:50%;
+      }
+
+      .bottombar
+      {
+        float:none;
+        clear:left;
+      }
+
+      .bottombar a
+      {
+        width:20%;
+      }
+
+      @media (orientation:portrait) {
+      /* iPhone portrait */
+
+        .mekkcell
+        {
+          width: 50%;
+        }
+
+
+        .topbar
+        {
+          width: 100%;
+        }
+
+        .mekk
+        {
+          width: 100%;
+        }
+        
+        
+      .bottombar a
+      {
+        width:20%;
+        height:100%;
+      }
+
+        .hidden-xs-portrait
+        {
+          display: none;
+        }
+
+      }
+
+      @media (orientation:landscape) {
+      /* iPhone landscape */
+
+          .viewcell
+          {
+            height: 25%;
+            width: 100%;
+          }
+
+          .mekkcell
+          {
+            width: 50%;
+          }
+
+          .topbar
+          {
+            width: 50%;
+          }
+
+          .mekk
+          {
+            width: 50%;
+            height: 50%;
+          }
+          
+          .bottombar a
+          {
+            width:20%;
+            height:100%;
+          }
+          
+          #container
+          {
+            position:fixed;
+            max-height: calc(100vh);
+          }
+
+          .hidden-xs-landscape
+          {
+            display: none;
+          }
+
+      }
+
+    .hidden
+    {
+      display:none;
+    }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div id="container">
+
+      <div class="viewcell topbar labelcell">
+
+              <span>health</span>
+
+      </div>
+
+      <div class="viewcell topbar labelcell">
+
+              <span>energy</span>
+
+      </div>
+
+      <div style="" class="viewcell mekk player">
+        <div class="mekkcell labelcell">
+                      <a href="#1" class="hidden-xs-landscape">1</a>
+                      <span class="hidden-xs-portrait">player.1</span>
+              </div><div class="mekkcell labelcell">
+                      <a href="#2" class="hidden-xs-landscape">2</a>
+                      <span class="hidden-xs-portrait">player.2</span>
+                  </div><div class="mekkcell labelcell">
+                      <a href="#3" class="hidden-xs-landscape">3</a>
+                      <span class="hidden-xs-portrait">player.3</span>
+                  </div><div class="mekkcell labelcell">
+                      <a href="#4" class="hidden-xs-landscape">4</a>
+                      <span class="hidden-xs-portrait">player.4</span>
+                  </div>
+
+
+
+
+
+
+
+
+
+
+      </div><div class="hidden-xs-portrait viewcell mekk enemy">
+              <div class="mekkcell labelcell">
+                      <span>enemy.1</span>
+              </div><div class="mekkcell labelcell">
+
+                      <span>enemy.2</span>
+              </div><div class="mekkcell labelcell">
+
+                      <span>enemy.3</span>
+              </div><div class="mekkcell labelcell">
+
+                      <span>enemy.4</span>
+              </div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+      <div class="viewcell bottombar labelcell">
+
+              <div></div>
+              <a class="attack fire hidden-xs-portrait" href="#attack/fire">fire</a>
+
+              <div></div>
+              <a class="attack leaf hidden-xs-portrait" href="#attack/leaf">leaf</a>
+              <span class="message hidden-xs-landscape">choose a piece to change its element</span>
+              <div></div>
+              <a class="attack right aqua hidden-xs-portrait" href="#attack/aqua">aqua</a>
+              <div></div>
+
+          </div>
+
+        </div>
+
+
+  </body>
+
+</html>
