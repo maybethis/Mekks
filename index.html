@@ -49,7 +49,7 @@
 {
    var fireCount = getElementCountFor('fire'); 
 var fireButton = document.getElementsByClassName('attack fire')[0];
-if (fireCount == 0) {fireButton.disabled = "disabled";fireButton.onclick = ""; fireButton.style.opacity = 0.5} else {fireButton.disabled = "";fireButton.onclick = function() {elementButtonClicked('fire')};fireButton.style.opacity = 1}
+if (fireCount == 0) {fireButton.disabled = "disabled";fireButton.onclick = ""; fireButton.style.opacity = "0.5"} else {fireButton.disabled = "";fireButton.onclick = function() {elementButtonClicked('fire')};fireButton.style.opacity = "1"}
 
    var aquaCount = getElementCountFor('aqua'); 
 var aquaButton = document.getElementsByClassName('attack aqua')[0];
