@@ -25,37 +25,19 @@
         padding:0;
       }
 
+      .hidden-xs-portrait
+      {
+        display: block;
+      }
+      .hidden-xs-landscape
+      {
+        display: block;
+      }
+
       #container
       {
         height: 100vh;
         background: black;
-      }
-
-      .viewcell
-      {
-        height: 20%;
-        background: white;
-        width:100%;
-        float:left;
-      }
-
-      .player
-      {
-        height: 100%;
-        float: left;
-      }
-
-      .enemy
-      {
-        height: 100%;
-        float: left;
-      }
-
-      .mekkcell
-      {
-        float: left;
-        background: gray;
-        height:100%;
       }
 
       .labelcell
@@ -67,34 +49,42 @@
           display: table;
       }
 
-      .labelcell * {display: table-cell; vertical-align: middle; }
+      .labelcell * {display: table-cell; vertical-align: middle;
+      word-break: break-all; }
 
-
-      .attackbuttongroup
+      .viewcell
       {
-        height:100%;
+        height: 20%;
+        background: white;
+        width:100%;
+        float:left;
       }
 
-      .attackbutton
+      .mekk
       {
-        width: 20%;
-        margin-left:6.66%;
-        margin-right:6.67%;
-        float:left;
+        height:40%;
+      }
+
+      .mekkcell
+      {
+        float: left;
+        background: gray;
+        height:50%;
       }
 
       .bottombar
       {
-        bottom:0;
+        float:none;
+        clear:left;
+      }
+
+      .bottombar a
+      {
+        width:20%;
       }
 
       @media (orientation:portrait) {
       /* iPhone portrait */
-
-        .hidden-xs-portrait
-        {
-          display: none;
-        }
 
         .mekkcell
         {
@@ -107,20 +97,20 @@
           width: 100%;
         }
 
-        .player
+        .mekk
         {
           width: 100%;
+        }
+
+        .hidden-xs-portrait
+        {
+          display: none;
         }
 
       }
 
       @media (orientation:landscape) {
       /* iPhone landscape */
-
-          .hidden-xs-landscape
-          {
-            display: none;
-          }
 
           .viewcell
           {
@@ -138,17 +128,23 @@
             width: 50%;
           }
 
-          .player
+          .mekk
           {
-            width:50%;
+            width: 50%;
+            height: 50%;
           }
 
-          .enemy
+          .hidden-xs-landscape
           {
-            width:50%;
+            display: none;
           }
 
       }
+
+    .hidden
+    {
+      display:none;
+    }
 
     </style>
 
@@ -158,129 +154,94 @@
 
     <div id="container">
 
-      <div class="viewcell topbar">
-
-          <div class="labelcell">
+      <div class="viewcell topbar labelcell">
 
               <span>health</span>
 
-          </div>
-
       </div>
 
-      <div class="viewcell topbar">
-
-          <div class="labelcell">
+      <div class="viewcell topbar labelcell">
 
               <span>energy</span>
 
-          </div>
-
       </div>
 
-      <div class="viewcell">
-
-          <div class="player">
-
-              <div class="mekkcell">
-                  <div class="labelcell">
+      <div style="" class="viewcell mekk player">
+        <div class="mekkcell labelcell">
                       <a href="#1" class="hidden-xs-landscape">1</a>
                       <span class="hidden-xs-portrait">player.1</span>
-                  </div>
-              </div>
-
-              <div class="mekkcell">
-                  <div class="labelcell">
+              </div><div class="mekkcell labelcell">
                       <a href="#2" class="hidden-xs-landscape">2</a>
                       <span class="hidden-xs-portrait">player.2</span>
+                  </div><div class="mekkcell labelcell">
+                      <a href="#3" class="hidden-xs-landscape">3</a>
+                      <span class="hidden-xs-portrait">player.3</span>
+                  </div><div class="mekkcell labelcell">
+                      <a href="#4" class="hidden-xs-landscape">4</a>
+                      <span class="hidden-xs-portrait">player.4</span>
                   </div>
-              </div>
 
-          </div>
 
-          <div class="hidden-xs-portrait enemy">
 
-              <div class="mekkcell">
-                  <div class="labelcell">
+
+
+
+
+
+
+
+      </div><div class="hidden-xs-portrait viewcell mekk enemy">
+        <div class="mekkcell labelcell">
+
                       <span>enemy.1</span>
-                  </div>
-              </div>
+              </div><div class="mekkcell labelcell">
 
-              <div class="mekkcell">
-                  <div class="labelcell">
                       <span>enemy.2</span>
-                  </div>
-              </div>
+              </div><div class="mekkcell labelcell">
 
-          </div>
-
-      </div>
-
-      <div class="viewcell">
-
-          <div class="player">
-
-          <div class="mekkcell">
-          <div class="labelcell">
-          <a href="#3" class="hidden-xs-landscape">3</a>
-          <span class="hidden-xs-portrait">player.3</span>
-          </div>
-
-          </div>
-          <div class="mekkcell">
-          <div class="labelcell">
-          <a href="#4" class="hidden-xs-landscape">4</a>
-          <span class="hidden-xs-portrait">player.4</span>
-          </div>
-          </div>
-
-          </div>
-
-          <div class="hidden-xs-portrait enemy">
-
-              <div class="mekkcell">
-                  <div class="labelcell">
                       <span>enemy.3</span>
-                  </div>
-              </div>
+              </div><div class="mekkcell labelcell">
 
-              <div class="mekkcell">
-                  <div class="labelcell">
                       <span>enemy.4</span>
-                  </div>
               </div>
 
-          </div>
+
+
+
+
+
+
+
+
 
       </div>
 
-      <div class="viewcell bottombar">
 
-          <div class="hidden-xs-landscape labelcell">
-              <span class="hidden-xs-landscape">choose a piece to change the element</span>
+
+
+
+<div class="viewcell bottombar labelcell">
+
+              <div></div>
+              <a class="attack fire hidden-xs-portrait" href="#attack/fire">fire</a>
+              <a class="left leaf hidden" href="#tinker/leaf">leaf</a>
+              <a class="left aqua hidden" href="#tinker/aqua">aqua</a>
+              <a class="left fire hidden" href="#tinker/fire">fire</a>
+
+              <div></div>
+              <a class="attack leaf hidden-xs-portrait" href="#attack/leaf">leaf</a>
+              <span class="message hidden-xs-landscape">choose a piece to change its element</span>
+              <div></div>
+
+              <a class="right fire hidden" href="#tinker/fire">fire</a>
+              <a class="right leaf hidden" href="#tinker/leaf">leaf</a>
+              <a class="right aqua hidden" href="#tinker/aqua">aqua</a>
+              <a class="attack right aqua hidden-xs-portrait" href="#attack/aqua">aqua</a>
+              <div></div>
+
           </div>
 
-          <div class="hidden-xs-portrait attackbuttongroup">
-
-              <div class="attackbutton labelcell">
-                      <a href="#fire">fire</a>
-              </div>
-
-              <div class="attackbutton labelcell">
-                      <a href="#aqua">aqua</a>
-
-              </div>
-
-              <div class="attackbutton labelcell">
-                      <a href="#leaf">leaf</a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-      </div>
+        </div>
 
 
   </body>
