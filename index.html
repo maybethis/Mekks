@@ -48,8 +48,8 @@
     
     function tinkerForElement(elementName)
     {
-      document.querySelector('.bottombar .left').innerHTML(getWeakForElement(elementName));
-      document.querySelector('.bottombar .right').innerHTML(getStrongForElement(elementName));
+      document.getElementsByClassName('left')[0].innerHTML(getWeakForElement(elementName));
+      document.getElementsByClassName('right')[0].innerHTML(getStrongForElement(elementName));
     }
 
     function addClassToParent(targetClassName,context) {removeAllActives();context.parentNode.className += ' '+targetClassName; 
