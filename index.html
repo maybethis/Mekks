@@ -130,7 +130,7 @@ console.log('message changed to: '+message);
 
       .viewcell
       {
-        height: 20%;
+        height:20%;
         background: white;
         width:100%;
         float:left;
@@ -138,7 +138,7 @@ console.log('message changed to: '+message);
 
       .mekk
       {
-        height:40%;
+        
       }
 
             .mekkcell
@@ -195,39 +195,36 @@ text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
             {
               border-bottom-right-radius: 100%;
             }
-
-      .bottombar
-      {
-        float:none;
-        clear:left;
-      }
-
-      .bottombar a
-      {
-        width:20%;
-      }
       
       .left
       {
+       border-radius:0;
         border-top-right-radius:100%;
-        border-bottom-right-radius:100%;
-        border-top-left-radius:0;
-        border-bottom-left-radius:0;
+        position:fixed;
+       bottom:0;
+       left:0;
+       width: 20%;
+       height: 20vh;
+       line-height:20vh;
       }
       
       .right
       {
-        border-top-right-radius:0;
-        border-bottom-right-radius:0;
+        border-radius:0;
         border-top-left-radius:100%;
-        border-bottom-left-radius:100%;
+       position:fixed;
+       bottom:0;
+       right:0;
+       width: 20%;
+       height: 20vh;
+       line-height:20vh;
       }
         
         .attack.fire
         {
           border-radius: 0;
           border-top-left-radius:100%;
-          border-bottom-left-radius:100%;
+          border-bottom-left-radius:0;
         }
         
         .attack.leaf
@@ -239,7 +236,7 @@ text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
         {
           border-radius: 0;
           border-top-right-radius:100%;
-          border-bottom-right-radius:100%;
+          border-bottom-right-radius:0;
         }
     
     [data-element="fire"]
@@ -262,14 +259,21 @@ text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
 
       @media (orientation:portrait) {
       /* iPhone portrait */
-
         .mekk
+{
+padding: 15% 30%;
+width: 40%;
+height: 30%;
+}
+        .bottombar
         {
-           height: 30%;
-           margin-top:5%;
-           margin-bottom:5%;
+         height:1em;
+         line-height:1em;
         }
-
+        .buttonbar a;
+        {
+height:inherit;
+}
         .mekkcell
         {
           width: 50%;
@@ -279,22 +283,6 @@ text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
         .topbar
         {
           width: 100%;
-        }
-        
-        .bottombar
-        {
-        	height: 20%;
-        }
-        
-        .bottombar a
-        {
-        	
-        }
-
-        .mekk
-        {
-          padding: 0 25%;
-          width: 50%;
         }
 
       .mekkcell.active
@@ -376,7 +364,7 @@ text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
           {
             width: 25%;
             height: 50%;
-            padding: 0 12.5%;
+            padding: 2.5% 12.5%;
           }
 
           #container
@@ -387,11 +375,19 @@ text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
           
         .bottombar
         {
-        	padding: 10vh 0px 5vh 0;
-height: 10vh;
+        	padding: 0;
+height:12.5vh;
 position: fixed;
 bottom: 0px;
 background:none;
+        }
+        .bottombar .attack
+        {
+line-height:5vh;
+        }
+        .bottombar .incoming
+        {
+           Font
         }
 
           .hidden-xs-landscape
@@ -416,13 +412,33 @@ background:none;
 
       <div class="viewcell topbar labelcell">
 
-              <span>health</span>
+              <div class="progress-bar" style="width:
+100%;
+height:50%;
+border-style: inset;
+border: 0vmin;
+border-top:0;
+border-left:0;
+border-bottom:0;
+background:rgba(0,0,0,0.5);
+border-color:rgba(255,255,255,0.5);
+text-align:center;">&nbsp;</div>
 
-      </div>
+</div>
 
-      <div class="viewcell topbar labelcell">
+<div class="viewcell topbar labelcell">
 
-              <span>energy</span>
+              <div class="progress-bar" style="min-width:0;
+width:100%;
+height:50%;
+border-style: 0vmin inset;
+border: 100vmin;
+border-top:0;
+border-left:0;
+border-bottom:0;
+background:rgba(50,50,50,0.5);
+border-color:rgba(255,255,255,0.5);
+text-align:center;">&nbsp;</div>
 
       </div>
 
