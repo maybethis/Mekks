@@ -49,15 +49,15 @@
 {
    var fireCount = getElementCountFor('fire'); 
 var fireButton = document.getElementsByClassName('attack fire')[0];
-if (fireCount == 0) {fireButton.disabled = true;} else {fireButton.disabled = false;}
+if (fireCount == 0) {fireButton.disabled = true;fireButton.onclick = "";} else {fireButton.disabled = false;fireButton.onclick = "elementButtonClicked('fire')"}
 
    var aquaCount = getElementCountFor('aqua'); 
 var aquaButton = document.getElementsByClassName('attack aqua')[0];
-if (aquaCount == 0) {aquaButton.disabled = true;} else {aquaButton.disabled = false;}
+if (aquaCount == 0) {aquaButton.disabled = true;aquaButton.onclick = ""} else {aquaButton.disabled = false;aquaButton.onclick="elementButtonClicked('aqua')"}
 
    var leafCount = getElementCountFor('leaf'); 
 var leafButton = document.getElementsByClassName('attack leaf')[0];
-if (leafCount == 0) {leafButton.disabled = true;} else {leafButton.disabled = false;}
+if (leafCount == 0) {leafButton.disabled = true;leafButton.onclick=""} else {leafButton.disabled = falseelementButtonClicked('leaf');}
 }
     
     function tinkerForElement(elementName)
@@ -102,6 +102,11 @@ console.log('message reset, resetting buttons');
       document.getElementsByClassName('right')[0].innerHTML = '';
       document.getElementsByClassName('right')[0].dataset.element = '';
     
+}
+
+function elementButtonClicked(elementName)
+{
+var count = getElementCountFor('fire'); console.log(count); alert('attacked with '+elementName+' x'+count)
 }
 
 function updateMessage(message) {
@@ -529,13 +534,13 @@ text-align:center;">&nbsp;</div>
 
 <span class="hidden-xs-portrait incoming player">player</span>
               <div></div>
-              <a class="attack fire hidden-xs-portrait" href="#attack/fire" data-element="fire" onclick="var count = getElementCountFor('fire'); console.log(count); alert('attacked with '+this.dataset.element+' x'+count)">fire</a>
+              <a class="attack fire hidden-xs-portrait" href="#attack/fire" data-element="fire" onclick="elementButtonClicked(this.dataset.element)">fire</a>
               <a class="hidden-xs-landscape left" disabled="true" onclick="updateActiveToElement(this.innerHTML);this.innerHTML='';this.dataset.element='';checkElementButtons()"></a>
               <div></div>
-              <a class="attack leaf hidden-xs-portrait" href="#attack/leaf" data-element="leaf" onclick="var count = getElementCountFor('leaf');console.log(count); alert('attacked with '+this.dataset.element+' x'+count)">leaf</a>
+              <a class="attack leaf hidden-xs-portrait" href="#attack/leaf" data-element="leaf" onclick="elementButtonClicked(this.dataset.element)">leaf</a>
               <span class="message hidden-xs-landscape" onload="this.innerHTML = defaultMessage;">tap or rotate</span>
               <div></div>
-              <a class="attack aqua hidden-xs-portrait" href="#attack/aqua" data-element="aqua" onclick="var count = getElementCountFor(this.dataset.element);console.log(count); alert('attacked with '+this.dataset.element+' x'+count)">aqua</a>
+              <a class="attack aqua hidden-xs-portrait" href="#attack/aqua" data-element="aqua" onclick="elementButtonClicked(this.dataset.element)">aqua</a>
               <a class="hidden-xs-landscape right" disabled="true" onclick="updateActiveToElement(this.innerHTML);this.innerHTML='';this.dataset.element='';checkElementButtons()"></a>
               <div></div>
 <span class="hidden-xs-portrait incoming enemy">enemy</span>
