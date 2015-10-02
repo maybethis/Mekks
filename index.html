@@ -273,7 +273,31 @@ console.log('message changed to: '+message);
 
       .mekkcell.active
       {
-        border-radius: 0;
+        border-radius: 25%;
+      }
+      
+      .mekkcell.active:nth-of-type(1)
+      {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      
+      .mekkcell.active:nth-of-type(2)
+      {
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      
+      .mekkcell.active:nth-of-type(3)
+      {
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      
+      .mekkcell.active:nth-of-type(4)
+      {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
       }
 
       .mekkcell a.cancel
