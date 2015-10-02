@@ -171,8 +171,26 @@ console.log('message changed to: '+message);
       .bottombar a
       {
         width:20%;
-        color:white;
+        height:100%;
       }
+    
+    [data-element="fire"]
+    {
+      background:red;
+      color:white;
+    }
+    
+    [data-element="leaf"]
+    {
+      background:green;
+      color:white;
+    }
+    
+    [data-element="aqua"]
+    {
+      background:blue;
+      color:white;
+    }
 
       @media (orientation:portrait) {
       /* iPhone portrait */
@@ -193,13 +211,6 @@ console.log('message changed to: '+message);
           padding: 0 25%;
           width: 50%;
         }
-
-
-      .bottombar a
-      {
-        width:20%;
-        height:100%;
-      }
 
       .mekkcell.active
       {
@@ -259,12 +270,6 @@ console.log('message changed to: '+message);
             padding: 0 12.5%;
           }
 
-          .bottombar a
-          {
-            width:20%;
-            height:100%;
-          }
-
           #container
           {
             position:fixed;
@@ -281,21 +286,6 @@ console.log('message changed to: '+message);
     .hidden
     {
       display:none;
-    }
-    
-    [data-element="fire"]
-    {
-      background:red;
-    }
-    
-    [data-element="leaf"]
-    {
-      background:green;
-    }
-    
-    [data-element="aqua"]
-    {
-      background:blue;
     }
 
     </style>
