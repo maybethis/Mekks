@@ -440,13 +440,13 @@ border-color:rgba(255,255,255,0.5);
       <div class="viewcell table text-center">
 
               <a class="hidden-portrait attack fire tablecell" href="#attack/fire" data-element="fire" onclick="elementButtonClicked(this.dataset.element)">fire</a>
-              <a class="hidden-landscape left tablecell" onclick="updateActiveToElement(this.innerHTML);this.innerHTML='';this.dataset.element='';checkElementButtons()"></a>
+              <a class="hidden-landscape left tablecell" onclick="updateActiveToElement(this.innerHTML);this.innerHTML='';this.dataset.element='';checkElementButtons()"  data-element=""></a>
               <div class="hidden-landscape margin tablecell"></div>
               <a class="hidden-portrait attack leaf tablecell" href="#attack/leaf" data-element="leaf" onclick="elementButtonClicked(this.dataset.element)">leaf</a>
               <span class="hidden-landscape message tablecell text-center" onload="this.innerHTML = defaultMessage;">tap or rotate</span>
               <div class="hidden-landscape margin tablecell"></div>
               <a class="hidden-portrait attack aqua tablecell" href="#attack/aqua" data-element="aqua" onclick="elementButtonClicked(this.dataset.element)">aqua</a>
-              <a class="hidden-landscape right tablecell" onclick="updateActiveToElement(this.innerHTML);this.innerHTML='';this.dataset.element='';checkElementButtons()"></a>
+              <a class="hidden-landscape right tablecell" onclick="updateActiveToElement(this.innerHTML);this.innerHTML='';this.dataset.element='';checkElementButtons()" data-element=""></a>
        
      </div>
 
