@@ -49,15 +49,15 @@
 {
    var fireCount = getElementCountFor('fire'); 
 var fireButton = document.getElementsByClassName('attack fire')[0];
-if (fireCount == 0) {fireButton.setAttribute("disabled","disabled");fireButton.onclick = null; fireButton.style.opacity = "0.5"} else {fireButton.setAttribute("disabled","");fireButton.onclick = function() {elementButtonClicked('fire')};fireButton.style.opacity = "1"}
+if (fireCount == 0) {fireButton.setAttribute("disabled","disabled");fireButton.onclick = null; fireButton.style.opacity = "0.5"; firebutton.setAttribute('href','javascript:void(null);')} else {fireButton.setAttribute("disabled","");fireButton.setAttribute('href','#attack/fire');fireButton.onclick = function() {elementButtonClicked('fire')};fireButton.style.opacity = "1"}
 
    var aquaCount = getElementCountFor('aqua'); 
 var aquaButton = document.getElementsByClassName('attack aqua')[0];
-if (aquaCount == 0) {aquaButton.setAttribute("disabled","disabled");aquaButton.onclick = null; aquaButton.style.opacity = "0.5"} else {aquaButton.setAttribute("disabled","");aquaButton.onclick=function() {elementButtonClicked('aqua')};aquaButton.style.opacity = "1"}
+if (aquaCount == 0) {aquaButton.setAttribute("disabled","disabled");aquaButton.onclick=null;aquaButton.setAttribute('href','javascript:void(null;)'); aquaButton.style.opacity = "0.5"} else {aquaButton.setAttribute("disabled","");aquaButton.setAttribute('href','#attack/aqua');aquaButton.onclick=function() {elementButtonClicked('aqua')};aquaButton.style.opacity = "1"}
 
    var leafCount = getElementCountFor('leaf'); 
 var leafButton = document.getElementsByClassName('attack leaf')[0];
-if (leafCount == 0) {leafButton.setAttribute("disabled","disabled");leafButton.style.opacity = "0.5";leafButton.onclick=null} else {leafButton.setAttribute("disabled",""); leafButton.style.opacity = "1"; leafButton.onclick=function(){elementButtonClicked('leaf')};}
+if (leafCount == 0) {leafButton.setAttribute("disabled","disabled");leafButton.style.opacity = "0.5";leafButton.onclick=null;leafButton.setAttribute('href','javascript:void(null);'} else {leafButton.setAttribute("disabled",""); leaf.setAttribute('href','#attack/leaf');leafButton.style.opacity = "1"; leafButton.onclick=function(){elementButtonClicked('leaf')};}
 }
     
     function tinkerForElement(elementName)
