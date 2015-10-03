@@ -57,7 +57,7 @@ if (aquaCount == 0) {aquaButton.setAttribute("disabled","disabled");aquaButton.o
 
    var leafCount = getElementCountFor('leaf'); 
 var leafButton = document.getElementsByClassName('attack leaf')[0];
-if (leafCount == 0) {leafButton.setAttribute("disabled","disabled");leafButton.style.opacity = "0.5";leafButton.onclick=null;leafButton.setAttribute('href','javascript:void(null);')} else {leafButton.setAttribute("disabled",""); leaf.setAttribute('href','#attack/leaf');leafButton.style.opacity = "1"; leafButton.onclick=function(){elementButtonClicked('leaf')};}
+if (leafCount == 0) {leafButton.setAttribute("disabled","disabled"); leafButton.style.opacity = "0.5"; leafButton.onclick=null;leafButton.setAttribute('href','javascript:void(null);')} else {leafButton.setAttribute("disabled",""); leafButton.setAttribute('href','#attack/leaf');leafButton.style.opacity = "1"; leafButton.onclick=function(){elementButtonClicked('leaf')};}
 }
     
     function tinkerForElement(elementName)
