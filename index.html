@@ -49,15 +49,15 @@
 {
    var fireCount = getElementCountFor('fire'); 
 var fireButton = document.getElementsByClassName('attack fire')[0];
-if (fireCount == 0) {fireButton.disabled = "disabled";fireButton.onclick = ""; fireButton.style.opacity = "0.5"} else {fireButton.disabled = "";fireButton.onclick = function() {elementButtonClicked('fire')};fireButton.style.opacity = "1"}
+if (fireCount == 0) {fireButton.setAttribute("disabled","disabled");fireButton.onclick = null; fireButton.style.opacity = "0.5"} else {fireButton.setAttribute("disabled","");fireButton.onclick = function() {elementButtonClicked('fire')};fireButton.style.opacity = "1"}
 
    var aquaCount = getElementCountFor('aqua'); 
 var aquaButton = document.getElementsByClassName('attack aqua')[0];
-if (aquaCount == 0) {aquaButton.disabled = "disabled";aquaButton.onclick = ""; aquaButton.style.opacity = "0.5"} else {aquaButton.disabled = "";aquaButton.onclick=function() {elementButtonClicked('aqua')};aquaButton.style.opacity = "1"}
+if (aquaCount == 0) {aquaButton.setAttribute("disabled","disabled");aquaButton.onclick = null; aquaButton.style.opacity = "0.5"} else {aquaButton.setAttribute("disabled","");aquaButton.onclick=function() {elementButtonClicked('aqua')};aquaButton.style.opacity = "1"}
 
    var leafCount = getElementCountFor('leaf'); 
 var leafButton = document.getElementsByClassName('attack leaf')[0];
-if (leafCount == 0) {leafButton.disabled = "disabled";leafButton.style.opacity = "0.5";leafButton.onclick=""} else {leafButton.disabled = ""; leafButton.style.opacity = "1"; leafButton.onclick=function(){elementButtonClicked('leaf')};}
+if (leafCount == 0) {leafButton.setAttribute("disabled","disabled");leafButton.style.opacity = "0.5";leafButton.onclick=null} else {leafButton.setAttribute("disabled",""); leafButton.style.opacity = "1"; leafButton.onclick=function(){elementButtonClicked('leaf')};}
 }
     
     function tinkerForElement(elementName)
