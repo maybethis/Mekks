@@ -212,6 +212,16 @@ border-color:rgba(255,255,255,0.5);
       transition: 0.25s all;
       overflow: hidden;
       }
+      
+            a[data-element=""]
+            {
+                display:none;
+            }
+            
+            a:not([data-element=""])
+            {
+                cursor:pointer;
+            }
             
             a, a:visited
             {
@@ -227,7 +237,6 @@ border-color:rgba(255,255,255,0.5);
               -moz-user-select: none;
               -ms-user-select: none;
               user-select: none;
-              cursor: pointer;
             }
             
             a:hover, a:active
