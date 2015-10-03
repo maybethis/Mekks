@@ -338,21 +338,10 @@ border-color:rgba(255,255,255,0.5);
         border-top-right-radius: 0;
         border-bottom-left-radius: 0;
       }
-
-      .mekkcell .cancel
-      {
-        display:none;
-      }
-      
-      .mekkcell.active .cancel
-      {
-        display:auto;
-      }
-
-      .mekkcell .tinker
-      {
-        display:auto;
-      }
+        
+        .mekkcell:not(.active) .cancel {
+            display: none;
+        }
 
       .mekkcell.active .tinker
       {
