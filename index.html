@@ -155,6 +155,11 @@ console.log('message changed to: '+message);
       word-break: break-word;
       }
       
+      .message
+      {
+        width:60%;
+      }
+      
       .text-center
       {
        text-align:center;
@@ -343,6 +348,12 @@ border-color:rgba(255,255,255,0.5);
       {
         display:none;
       }
+      
+
+    .hidden-landscape
+{
+  display:auto;
+}
 
       @media (orientation:landscape) {
 
@@ -359,6 +370,11 @@ border-color:rgba(255,255,255,0.5);
           .hidden-landscape
           {
             display:none;
+          }
+          
+          .hidden-portrait
+          {
+            display:auto;
           }
 
       }
@@ -380,22 +396,22 @@ border-color:rgba(255,255,255,0.5);
 
      <div class="viewcell">&nbsp;</div>
 
-     <div class="viewcell mekk player">
-      <div class="mekkcell" data-element="fire">
-        <a href="#1" class="hidden-landscape tinker" onclick="addClassToParent('active',this); tinkerForElement(this.parentNode.dataset.element);">&nbsp;</a>
-        <a href="#cancel" class="hidden-landscape cancel" onclick="removeClassFromParent('active',this);">X</a>
+     <div class="viewcell mekk player text-center">
+      <div class="mekkcell table" data-element="fire">
+        <a href="#1" class="hidden-landscape tinker tablecell" onclick="addClassToParent('active',this); tinkerForElement(this.parentNode.dataset.element);">&nbsp;</a>
+        <a href="#cancel" class="hidden-landscape cancel tablecell" onclick="removeClassFromParent('active',this);">X</a>
       </div>
-      <div class="mekkcell" data-element="fire">
-        <a href="#2" class="hidden-landscape tinker" onclick="addClassToParent('active',this); tinkerForElement(this.parentNode.dataset.element);">&nbsp;</a>
-        <a href="#cancel" class="hidden-landscape cancel " onclick="removeClassFromParent('active',this)">X</a>
+      <div class="mekkcell table" data-element="fire">
+        <a href="#2" class="hidden-landscape tinker tablecell" onclick="addClassToParent('active',this); tinkerForElement(this.parentNode.dataset.element);">&nbsp;</a>
+        <a href="#cancel" class="hidden-landscape cancel tablecell" onclick="removeClassFromParent('active',this)">X</a>
       </div>
-      <div class="mekkcell" data-element="fire">
-        <a href="#3" class="hidden-landscape tinker" onclick="addClassToParent('active',this); tinkerForElement(this.parentNode.dataset.element);">&nbsp;</a>
-        <a href="#cancel" class="hidden-landscape cancel" onclick="removeClassFromParent('active',this)">X</a>
+      <div class="mekkcell table" data-element="fire">
+        <a href="#3" class="hidden-landscape tinker tablecell" onclick="addClassToParent('active',this); tinkerForElement(this.parentNode.dataset.element);">&nbsp;</a>
+        <a href="#cancel" class="hidden-landscape cancel tablecell" onclick="removeClassFromParent('active',this)">X</a>
       </div>
-      <div class="mekkcell" data-element="fire">
-         <a href="#4" class="hidden-landscape tinker" onclick="addClassToParent('active',this); tinkerForElement(this.parentNode.dataset.element);">&nbsp;</a>
-         <a href="#cancel" class="hidden-landscape cancel " onclick="removeClassFromParent('active',this)">X</a>
+      <div class="mekkcell table" data-element="fire">
+         <a href="#4" class="hidden-landscape tinker tablecell" onclick="addClassToParent('active',this); tinkerForElement(this.parentNode.dataset.element);">&nbsp;</a>
+         <a href="#cancel" class="hidden-landscape cancel tablecell" onclick="removeClassFromParent('active',this)">X</a>
       </div>
      </div>
      
@@ -423,8 +439,8 @@ border-color:rgba(255,255,255,0.5);
               <a class="hidden-landscape left tablecell" onclick="updateActiveToElement(this.innerHTML);this.innerHTML='';this.dataset.element='';checkElementButtons()"></a>
               <div class="hidden-landscape margin tablecell"></div>
               <a class="hidden-portrait attack leaf tablecell" href="#attack/leaf" data-element="leaf" onclick="elementButtonClicked(this.dataset.element)">leaf</a>
-              <span class="hidden-landscape message tablecell" onload="this.innerHTML = defaultMessage;">tap or rotate</span>
-              <div class="hidden-landscape margin tablecell></div>
+              <span class="hidden-landscape message tablecell text-center" onload="this.innerHTML = defaultMessage;">tap or rotate</span>
+              <div class="hidden-landscape margin tablecell"></div>
               <a class="hidden-portrait attack aqua tablecell" href="#attack/aqua" data-element="aqua" onclick="elementButtonClicked(this.dataset.element)">aqua</a>
               <a class="hidden-landscape right tablecell" onclick="updateActiveToElement(this.innerHTML);this.innerHTML='';this.dataset.element='';checkElementButtons()"></a>
        
