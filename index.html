@@ -339,12 +339,22 @@ border-color:rgba(255,255,255,0.5);
         border-bottom-left-radius: 0;
       }
 
-      .mekkcell a.cancel
+      .mekkcell .cancel
       {
         display:none;
       }
+      
+      .mekkcell.active .cancel
+      {
+        display:auto;
+      }
 
-      .mekkcell.active a.tinker
+      .mekkcell .tinker
+      {
+        display:auto;
+      }
+
+      .mekkcell.active .tinker
       {
         display:none;
       }
