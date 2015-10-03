@@ -223,6 +223,11 @@ border-color:rgba(255,255,255,0.5);
                 cursor:initial;
             }
             
+            :not(a[disabled="disabled"])
+            {
+                cursor: pointer;
+            }
+            
             a, a:visited
             {
               color:white;
@@ -237,7 +242,6 @@ border-color:rgba(255,255,255,0.5);
               -moz-user-select: none;
               -ms-user-select: none;
               user-select: none;
-              cursor:pointer;
             }
             
             a:hover, a:active
