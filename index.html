@@ -1,5 +1,6 @@
-<!DOCTYPE html><html lang="en"><head>
-
+<!DOCTYPE html>
+<html class="" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
@@ -73,7 +74,7 @@ if (leafCount == 0) {leafButton.setAttribute("disabled","disabled"); leafButton.
 
     function getElementCountFor(elementName)
 {
-var count=0; var mekkcells = document.getElementsByClassName('viewcell player')[0].getElementsByClassName('mekkcell'); for (var i = 0; i < mekkcells.length; i++) {console.log(mekkcells[i].dataset.element); if (elementName == mekkcells[i].dataset.element) {count++}}; return count;
+var count=0; var mekkcells = document.getElementsByClassName('mekk player')[0].getElementsByClassName('mekkcell'); for (var i = 0; i < mekkcells.length; i++) {console.log(mekkcells[i].dataset.element); if (elementName == mekkcells[i].dataset.element) {count++}}; return count;
 }
 
     function addClassToParent(targetClassName,context) {removeAllActives();context.parentNode.className += ' '+targetClassName; 
@@ -115,7 +116,7 @@ console.log('message changed to: '+message);
 }
     </script>
 
-    <style>
+  <style>
 
       html
       {
@@ -180,15 +181,16 @@ console.log('message changed to: '+message);
       
       .viewcell
       {
-        height:20%;
+        max-height:12vh;
         background: white;
         width:100%;
         clear:left;
+        height:100%;
       }
       
-      .double
+      .viewcell.double
       {
-        height:40%;
+        max-height:64vh;
       }
 
       .progress-bar
@@ -206,7 +208,7 @@ border-color:rgba(255,255,255,0.5);
 
       .mekk
       {
-        padding: 20% 5%;
+        padding: 0 50%;
       }
       
       .mekkcell
@@ -381,14 +383,7 @@ border-color:rgba(255,255,255,0.5);
 }
 
       @media (orientation:landscape) {
-
-          .viewcell
-          {
-            height: 25%;
-            clear:none;
-          }
-         
-
+           .mekk {padding:0 25%; width:50%;}
           .hidden-landscape
           {
             display:none;
@@ -401,7 +396,8 @@ border-color:rgba(255,255,255,0.5);
 
       }
 
-    </style>
+    
+  </style> 
 
   </head>
 
@@ -414,62 +410,62 @@ border-color:rgba(255,255,255,0.5);
 
      <div class="viewcell topbar text-center table"><span class="tablecell" style="vertical-align: middle; background: rgb(182, 245, 245) none repeat scroll 0% 0% padding-box; padding: 0;">energy</span></div>
 
-     <div style="background: rgba(204, 204, 204, 0.1) none repeat scroll 0% 0%; padding: 0; height: 40%; width: 100%;" class="viewcell double text-center table">
-    <span class="mekk player tablecell" style="padding: 12.5% 35%;">
-      <div class="mekkcell table" data-element="fire">
+     <div style="background: rgba(204, 204, 204, 0.1) none repeat scroll 0% 0%;" class="viewcell double text-center table"><span class="mekk player tablecell" style="">
+      <div style="margin-top: 0vh; height: 15vh; width: 15vh; margin-left: -15vh;" class="mekkcell tablecell" data-element="fire">
         <a href="#1" class="hidden-landscape tinker tablecell" onclick="addClassToParent('active',this); tinkerForElement(this.parentNode.dataset.element);">&nbsp;</a>
         <a href="#cancel" class="hidden-landscape cancel tablecell" onclick="removeClassFromParent('active',this);">X</a>
       </div>
-      <div class="mekkcell table" data-element="fire">
+      <div class="mekkcell table " style="width: 15vh; margin-right: -15vh; margin-top: 0px; height: 15vh;" data-element="leaf">
         <a href="#2" class="hidden-landscape tinker tablecell" onclick="addClassToParent('active',this); tinkerForElement(this.parentNode.dataset.element);">&nbsp;</a>
         <a href="#cancel" class="hidden-landscape cancel tablecell" onclick="removeClassFromParent('active',this)">X</a>
       </div>
-      <div class="mekkcell table " data-element="fire">
+      <div style="width: 15vh; height: 15vh; margin-left: -15vh; margin-top: 15vh;" class="mekkcell table " data-element="fire">
         <a href="#3" class="hidden-landscape tinker tablecell" onclick="addClassToParent('active',this); tinkerForElement(this.parentNode.dataset.element);">&nbsp;</a>
         <a href="#cancel" class="hidden-landscape cancel tablecell" onclick="removeClassFromParent('active',this)">X</a>
       </div>
-      <div class="mekkcell table" data-element="fire">
+      <div style="margin-top: 15vh; height: 15vh; width: 15vh; margin-right: -15vh;" data-element="aqua" class="mekkcell table ">
          <a href="#4" class="hidden-landscape tinker tablecell" onclick="addClassToParent('active',this); tinkerForElement(this.parentNode.dataset.element);">&nbsp;</a>
          <a href="#cancel" class="hidden-landscape cancel tablecell" onclick="removeClassFromParent('active',this)">X</a>
       </div>
-     </div>
-   </span>
-     <div style="background: rgba(204, 204, 204, 0.1) none repeat scroll 0% 0%;" class="viewcell table hidden-portrait">
-<span class="mekk enemy tablecell">
-              <div class="mekkcell" data-element="leaf">
-                      <span>&nbsp;</span>
-              </div>
-              <div class="mekkcell" data-element="leaf">
-
-                      <span>&nbsp;</span>
-              </div>
-              <div class="mekkcell" data-element="leaf">
-
-                      <span>&nbsp;</span>
-              </div>
-              <div class="mekkcell" data-element="leaf">
-
-                      <span>&nbsp;</span>
-              </div>
-          </span>
+     </span>
+    <span class="hidden-portrait mekk enemy tablecell" style="">
+      <div style="margin-top: 0vh; height: 15vmin; width: 15vmin; margin-left: -15vmin;" class="mekkcell tablecell" data-element="fire">
+        <a href="#1" class="hidden-landscape tinker tablecell" onclick="addClassToParent('active',this); tinkerForElement(this.parentNode.dataset.element);">&nbsp;</a>
+        <a href="#cancel" class="hidden-landscape cancel tablecell" onclick="removeClassFromParent('active',this);">X</a>
       </div>
+      <div class="mekkcell table " style="width: 15vmin; margin-right: -15vmin; margin-top: 0px; height: 15vmin;" data-element="leaf">
+        <a href="#2" class="hidden-landscape tinker tablecell" onclick="addClassToParent('active',this); tinkerForElement(this.parentNode.dataset.element);">&nbsp;</a>
+        <a href="#cancel" class="hidden-landscape cancel tablecell" onclick="removeClassFromParent('active',this)">X</a>
+      </div>
+      <div style="width: 15vmin; height: 15vmin; margin-left: -15vmin; margin-top: 15vmin;" class="mekkcell table " data-element="fire">
+        <a href="#3" class="hidden-landscape tinker tablecell" onclick="addClassToParent('active',this); tinkerForElement(this.parentNode.dataset.element);">&nbsp;</a>
+        <a href="#cancel" class="hidden-landscape cancel tablecell" onclick="removeClassFromParent('active',this)">X</a>
+      </div>
+      <div style="margin-top: 15vmin; height: 15vmin; width: 15vmin; margin-right: -15vmin;" data-element="aqua" class="mekkcell table ">
+         <a href="#4" class="hidden-landscape tinker tablecell" onclick="addClassToParent('active',this); tinkerForElement(this.parentNode.dataset.element);">&nbsp;</a>
+         <a href="#cancel" class="hidden-landscape cancel tablecell" onclick="removeClassFromParent('active',this)">X</a>
+      </div>
+     </span></div>
+   
+     
 
       <div style="background: rgba(204, 204, 204, 0.1) none repeat scroll 0% 0%;" class="viewcell table text-center">
 
-              <a style="opacity: 1;" disabled="" class="hidden-portrait attack fire tablecell" href="#attack/fire" data-element="fire" onclick="elementButtonClicked(this.dataset.element)">fire</a>
-              <a class="hidden-landscape left tablecell" onclick="updateActiveToElement(this.innerHTML);this.innerHTML='';this.dataset.element='';checkElementButtons()" data-element=""></a>
+              
+              <a style="" disabled="" class="hidden-portrait attack fire tablecell" href="#attack/fire" data-element="fire" onclick="elementButtonClicked(this.dataset.element)">fire</a><a data-element="" class="hidden-landscape left tablecell" onclick="updateActiveToElement(this.innerHTML);this.innerHTML='';this.dataset.element='';checkElementButtons()"></a>
               <div class="hidden-landscape margin tablecell"></div>
-              <a style="opacity: 0.5;" disabled="disabled" class="hidden-portrait attack leaf tablecell" href="javascript:void(null);" data-element="leaf" onclick="elementButtonClicked(this.dataset.element)">leaf</a>
-              <span class="hidden-landscape message tablecell text-center" onload="this.innerHTML = defaultMessage;">tap or rotate</span>
+              
+              <a style="" disabled="disabled" class="hidden-portrait attack leaf tablecell" href="javascript:void(null);" data-element="leaf" onclick="elementButtonClicked(this.dataset.element)">leaf</a><span class="hidden-landscape message tablecell text-center" onload="this.innerHTML = defaultMessage;">tap or rotate</span>
               <div class="hidden-landscape margin tablecell"></div>
-              <a style="opacity: 0.5;" disabled="disabled" class="hidden-portrait attack aqua tablecell" href="javascript:void(null;)" data-element="aqua" onclick="elementButtonClicked(this.dataset.element)">aqua</a>
-              <a class="hidden-landscape right tablecell" onclick="updateActiveToElement(this.innerHTML);this.innerHTML='';this.dataset.element='';checkElementButtons()" data-element=""></a>
+              <a style="" disabled="disabled" class="hidden-portrait attack aqua tablecell" href="javascript:void(null;)" data-element="aqua" onclick="elementButtonClicked(this.dataset.element)">aqua</a>
+              
        
-     </div>
+     <a data-element="" class="hidden-landscape right tablecell" onclick="updateActiveToElement(this.innerHTML);this.innerHTML='';this.dataset.element='';checkElementButtons()"></a></div>
 
    </div>
 
 
 
 
-</body><style type="text/css"></style></html>
+
+</body></html>
